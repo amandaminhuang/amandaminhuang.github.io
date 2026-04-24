@@ -3,41 +3,42 @@ import { useState } from 'react'
 export default function Contact() {
   const [sent, setSent] = useState(false)
 
-  function handleSubmit(e) {
-    e.preventDefault()
-    setSent(true)
-  }
-
   return (
-    <main>
-      <h1>Contact</h1>
-      <p>Happy to chat about a role, a project, or pickleball.</p>
+    <main className="page">
 
-      {sent ? (
-        <p>Message sent! I'll get back to you soon.</p>
-      ) : (
-        <form onSubmit={handleSubmit}>
-          <div>
-            <label htmlFor="name">Name</label><br />
-            <input id="name" type="text" required />
-          </div>
-          <div>
-            <label htmlFor="email">Email</label><br />
-            <input id="email" type="email" required />
-          </div>
-          <div>
-            <label htmlFor="message">Message</label><br />
-            <textarea id="message" rows={5} required />
-          </div>
-          <button type="submit">Send</button>
-        </form>
-      )}
+      <div className="card card--lg card--peach">
+        <p className="eyebrow">get in touch</p>
+        <h1 className="title-lg">say hello! 👋</h1>
+      </div>
 
-      <ul>
-        <li><a href="mailto:amanda.huang@yale.edu">amanda.huang@yale.edu</a></li>
-        <li><a href="https://linkedin.com/in/amandaminhuang" target="_blank" rel="noreferrer">LinkedIn</a></li>
-        <li><a href="/resume.pdf" target="_blank" rel="noreferrer">Resume</a></li>
-      </ul>
+      <div className="card card--white">
+        {sent ? (
+          <p className="title-md">message sent! i'll get back to you soon ✦</p>
+        ) : (
+          <form className="form" onSubmit={e => { e.preventDefault(); setSent(true) }}>
+            <div className="form__group">
+              <label className="form__label">name</label>
+              <input type="text" required className="form__input" />
+            </div>
+            <div className="form__group">
+              <label className="form__label">email</label>
+              <input type="email" required className="form__input" />
+            </div>
+            <div className="form__group">
+              <label className="form__label">message</label>
+              <textarea rows={5} required className="form__textarea" />
+            </div>
+            <button type="submit" className="btn btn--primary btn--submit">send it ✦</button>
+          </form>
+        )}
+
+        <div className="links-row" style={{ marginTop: '2rem', paddingTop: '1.5rem', borderTop: '2px solid var(--border)' }}>
+          <a href="mailto:you@email.com" className="link--accent">you@email.com</a>
+          <a href="https://linkedin.com/in/yourhandle" target="_blank" rel="noreferrer" className="link--accent">LinkedIn ↗</a>
+          <a href="/resume.pdf" target="_blank" rel="noreferrer" className="link--accent">Resume ↗</a>
+        </div>
+      </div>
+
     </main>
   )
 }
