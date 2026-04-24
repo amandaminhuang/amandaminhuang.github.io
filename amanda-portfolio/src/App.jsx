@@ -1,9 +1,9 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Nav from './components/nav'
-import Home from './pages/home'
-import About from './pages/about'
-import Projects from './pages/projects'
-import ProjectDetail from './pages/project_items'
+import Nav from './components/Nav'
+import Home from './pages/Home'
+import About from './pages/About'
+import Projects from './pages/Projects'
+import ProjectDetail from './pages/ProjectDetails'
 import Contact from './pages/Contact'
 
 export default function App() {
@@ -11,11 +11,11 @@ export default function App() {
     <BrowserRouter>
       <Nav />
       <Routes>
-        <Route path="/" element={<home />} />
-        <Route path="/about" element={<about />} />
-        <Route path="/projects" element={<projects />} />
-        <Route path="/projects/:id" element={<project_items />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/"             element={<Home />} />
+        <Route path="/about"        element={<About />} />
+        <Route path="/projects"     element={<Projects />} />
+        <Route path="/projects/:id" element={<ProjectDetail />} />
+        <Route path="/contact"      element={<Contact />} />
       </Routes>
     </BrowserRouter>
   )
