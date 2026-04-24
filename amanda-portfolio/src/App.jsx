@@ -1,10 +1,10 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Nav from './components/Nav'
-import Home from './pages/Home'
-import About from './pages/About'
-import Projects from './pages/Projects'
-import ProjectDetail from './pages/ProjectDetails'
-import Contact from './pages/Contact'
+import Nav from '/components/Nav'
+import Home from '/pages/Home'
+import About from '/pages/About'
+import Projects from '/pages/Projects'
+import ProjectDetail from '/pages/ProjectDetails'
+import Contact from '/pages/Contact'
 
 export default function App() {
   return (
