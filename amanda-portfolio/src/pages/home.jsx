@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <main>
       <h1>Hi, I'm Amanda.</h1>
-      <p>Product manager. Great friend.</p>
+      <p>Product manager. Great friend!! LOL </p>
       <Link to="/projects">See my work</Link>
       {' · '}
       <Link to="/contact">Get in touch</Link>
