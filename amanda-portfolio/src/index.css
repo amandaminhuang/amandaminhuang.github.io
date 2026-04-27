@@ -230,6 +230,79 @@ h1, h2, h3 { font-family: var(--font-serif); font-weight: 700; line-height: 1.2;
   gap: 1rem;
 }
 
+/* ── HERO FLOATING TAGS ── */
+.hero-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 6rem 2rem 4rem;
+  text-align: center;
+}
+
+.hero-tag-cloud {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  height: 320px;
+  margin: 0 auto 2rem;
+}
+
+.hero-name {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--font-serif);
+  font-size: clamp(3rem, 8vw, 5rem);
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--text);
+  white-space: nowrap;
+}
+
+.hero-tag {
+  position: absolute;
+  padding: 0.5rem 1.1rem;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: default;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  user-select: none;
+}
+.hero-tag:hover {
+  transform: translate(var(--tx), var(--ty)) rotate(var(--rot)) scale(1.12) !important;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  z-index: 10;
+}
+
+.hero-intro {
+  max-width: 620px;
+  margin: 0 auto 1.5rem;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: var(--text);
+}
+.hero-intro span { font-weight: 500; }
+.hero-intro .accent-orange { color: var(--orange); }
+.hero-intro .accent-blue   { color: var(--blue); }
+.hero-intro .accent-olive  { color: #7a9e60; }
+
+.hero-sub {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-bottom: 2rem;
+}
+
+.hero-ctas {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 /* ── RESPONSIVE ── */
 @media (max-width: 600px) {
   .nav { padding: 1rem 1.25rem; }
