@@ -33,8 +33,8 @@ export default function Contact() {
         )}
 
         <div className="links-row" style={{ marginTop: '2rem', paddingTop: '1.5rem', borderTop: '2px solid var(--border)' }}>
-          <a href="mailto:you@email.com" className="link--accent">you@email.com</a>
-          <a href="https://linkedin.com/in/yourhandle" target="_blank" rel="noreferrer" className="link--accent">LinkedIn ↗</a>
+          <a href="mailto:amanda.huang@yale.edu" className="link--accent">amanda.huang@yale.edu</a>
+          <a href="https://www.linkedin.com/in/amandaminhuang/" target="_blank" rel="noreferrer" className="link--accent">LinkedIn ↗</a>
           <a href="/resume.pdf" target="_blank" rel="noreferrer" className="link--accent">Resume ↗</a>
         </div>
       </div>

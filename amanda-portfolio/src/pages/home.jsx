@@ -81,9 +81,6 @@ export default function Home() {
           Currently in <span className="accent-olive">civic tech</span> and nonprofit ed.
         </p>
 
-        <p className="hero-sub">
-          (P.S. hover over the tags ↑)
-        </p>
 
         <div className="hero-ctas">
           <Link to="/projects" className="btn btn--primary">see my work →</Link>
