@@ -84,7 +84,6 @@ export default function Home() {
 
         <div className="hero-ctas">
           <Link to="/projects" className="btn btn--primary">see my work →</Link>
-          <Link to="/contact"  className="btn btn--secondary" style={{ border: '2px solid var(--border)' }}>get in touch</Link>
         </div>
 
       </div>
@@ -92,7 +91,7 @@ export default function Home() {
       {/* ── RECENT WORK ── */}
       <Section>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-          <h2 className="title-lg" style={{ marginBottom: 0 }}>recent work ✦</h2>
+          <h2 className="title-lg" style={{ marginBottom: 0 }}>featured work ✦</h2>
           <Link to="/projects" className="link--accent">see all →</Link>
         </div>
         <div className="grid-2">
@@ -115,40 +114,10 @@ export default function Home() {
           </div>
         </div>
         <div className="card card--peach">
-          <p className="eyebrow">when i'm not pm-ing</p>
+          <p className="eyebrow">when i'm not creating</p>
           <div className="chips" style={{ marginTop: '0.75rem' }}>
             {HOBBIES.map(h => <span key={h} className="chip">{h}</span>)}
           </div>
-        </div>
-      </Section>
-
-      {/* ── HAPPY NOTES ── */}
-      <Section>
-        <h2 className="title-lg">happy notes 💌</h2>
-        <p className="muted" style={{ marginTop: '-0.5rem' }}>
-          Things people have said, moments I want to remember.
-        </p>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-          {NOTES.map((note, i) => (
-            <div key={i} className={`card card--${['yellow','blue','purple'][i % 3]}`}>
-              <span style={{ fontSize: '1.5rem' }}>{note.emoji}</span>
-              <p style={{ marginTop: '0.5rem', fontFamily: 'var(--font-serif)', fontSize: '1.05rem' }}>
-                {note.text}
-              </p>
-            </div>
-          ))}
-        </div>
-      </Section>
-
-      {/* ── END ── */}
-      <Section>
-        <div className="card card--lg card--orange" style={{ textAlign: 'center' }}>
-          <p style={{ fontSize: '2rem', marginBottom: '1rem' }}>✦</p>
-          <h2 className="title-lg" style={{ color: 'white' }}>let's make something good.</h2>
-          <p style={{ color: 'white', opacity: 0.85, marginBottom: '2rem' }}>
-            Reach out — always happy to chat.
-          </p>
-          <Link to="/contact" className="btn btn--secondary">say hello →</Link>
         </div>
       </Section>
 
