@@ -2,19 +2,19 @@ import { Link } from 'react-router-dom'
 import { useEffect, useRef } from 'react'
 
 const TAGS = [
-  { label: 'Product',     bg: 'var(--blue)',   color: '#fff', top: '8%',  left: '5%',  rot: '-6deg'  },
-  { label: 'Civic Tech',  bg: 'var(--green)',  color: '#2E2A26', top: '0%',  left: '42%', rot: '4deg'   },
-  { label: 'Human-first', bg: 'var(--purple)', color: '#2E2A26', top: '18%', left: '72%', rot: '6deg'   },
-  { label: 'EdTech',      bg: 'var(--peach)',  color: '#2E2A26', top: '55%', left: '68%', rot: '-4deg'  },
-  { label: 'Research',    bg: 'var(--yellow)', color: '#2E2A26', top: '68%', left: '2%',  rot: '5deg'   },
-  { label: 'PM',          bg: 'var(--orange)', color: '#fff', top: '60%', left: '35%', rot: '-3deg'  },
+  { label: 'Product',     bg: '#6C9BCF', color: 'white',       top: '8%',  left: '5%',  rot: '-6deg' },
+  { label: 'Civic Tech',  bg: '#D9EEFF', color: '#355C7D',     top: '0%',  left: '42%', rot: '4deg'  },
+  { label: 'Human-first', bg: '#ffdf9a', color: '#5C4A2A',     top: '18%', left: '72%', rot: '6deg'  },
+  { label: 'EdTech',      bg: '#57a3ff', color: '#355C7D',     top: '55%', left: '68%', rot: '-4deg' },
+  { label: 'Research',    bg: '#C8D9F0', color: '#1E2A35',     top: '68%', left: '2%',  rot: '5deg'  },
+  { label: 'PM',          bg: '#355C7D', color: 'white',       top: '60%', left: '35%', rot: '-3deg' },
 ]
 
 const HOBBIES = ['🏓 pickleball', '✏️ mini cryptics', '☕ cold brew', '📚 mid-book (×3)']
 
 const PROJECTS = [
-  { id: 'civic',     emoji: '🏛️', tag: 'Civic Tech', title: 'Project one title',  color: 'yellow' },
-  { id: 'nonprofit', emoji: '👩‍💻', tag: 'Education',  title: 'Project two title', color: 'green'  },
+  { id: 'civic',     emoji: '🏛️', tag: 'Civic Tech', title: 'Project one title',  bg: '#E8EFF8' },
+  { id: 'nonprofit', emoji: '👩‍💻', tag: 'Education',  title: 'Project two title',  bg: '#EEF2F7' },
 ]
 
 const NOTES = [
@@ -52,7 +52,6 @@ export default function Home() {
 
       {/* ── HERO ── */}
       <div className="hero-layout">
-
         <div className="hero-tag-cloud">
           <div className="hero-name">amanda.</div>
           {TAGS.map(tag => (
@@ -83,37 +82,46 @@ export default function Home() {
 
 
         <div className="hero-ctas">
-          <Link to="/projects" className="btn btn--primary">see my work →</Link>
+          <Link to="/projects" className="btn" style={{ background: '#355C7D', color: 'white' }}>
+            see my work →
+          </Link>
         </div>
-
       </div>
 
-      {/* ── RECENT WORK ── */}
+      {/* ── FEATURED WORK ── */}
       <Section>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <h2 className="title-lg" style={{ marginBottom: 0 }}>featured work ✦</h2>
           <Link to="/projects" className="link--accent">see all →</Link>
         </div>
+
         <div className="grid-2">
           {PROJECTS.map(p => (
-            <Link key={p.id} to={`/projects/${p.id}`} className={`project-card card--${p.color}`}>
+            <Link
+              key={p.id}
+              to={`/projects/${p.id}`}
+              className="project-card"
+              style={{ background: p.bg }}
+            >
               <div className="project-card__emoji">{p.emoji}</div>
               <p className="eyebrow">{p.tag}</p>
               <h3 className="title-md">{p.title}</h3>
             </Link>
           ))}
         </div>
+
         <div className="grid-2">
-          <div className="card card--blue">
+          <div className="card" style={{ background: '#EEF2F7' }}>
             <p className="eyebrow">currently</p>
             <p className="title-md">Government PM · Summer 2025</p>
           </div>
-          <div className="card card--purple">
+          <div className="card" style={{ background: '#F7F0E8' }}>
             <p className="eyebrow">also</p>
             <p className="title-md">Nonprofit — girls in tech</p>
           </div>
         </div>
-        <div className="card card--peach">
+
+        <div className="card" style={{ background: '#FDF4E7' }}>
           <p className="eyebrow">when i'm not creating</p>
           <div className="chips" style={{ marginTop: '0.75rem' }}>
             {HOBBIES.map(h => <span key={h} className="chip">{h}</span>)}
