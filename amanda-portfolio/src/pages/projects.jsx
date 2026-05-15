@@ -2,83 +2,115 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 const CATEGORIES = [
-  { id: 'all',      label: 'All' },
-  { id: 'work',     label: 'Work & Internships' },
-  { id: 'research', label: 'Research' },
-  { id: 'coding',   label: 'Coding Projects' },
-  { id: 'hackathon',label: 'Hackathon' },
-  { id: 'volunteer', label: 'Volunteering & Groups' },
+  { id: 'all',        label: 'All' },
+  { id: 'work',       label: 'Work & Internships' },
+  { id: 'research',   label: 'Research' },
+  { id: 'coding',     label: 'Coding & Projects' },
 ]
 
 const PROJECTS = [
-  // ── INTERNSHIPS ──
+  // ── WORK & INTERNSHIPS ──
+  {
+    id: 'kwk-ops',
+    category: 'work',
+    tag: 'Operations · Nonprofit',
+    title: 'AI & Technology Strategy — Kode with Klossy',
+    desc: 'Led AI outreach strategy and platform management for a nonprofit serving thousands of young women.',
+    emoji: '⚙️',
+  },
+  {
+    id: 'sacm',
+    category: 'work',
+    tag: 'Wealth Management · AI',
+    title: 'Platform Evaluation — Service Academy Capital Management',
+    desc: 'Identified a 78% cost reduction through platform research and executive presentation.',
+    emoji: '📈',
+  },
   {
     id: 'civic',
     category: 'work',
-    tag: 'Civic Tech · Government',
-    title: 'Government PM Internship',
-    desc: 'Simplifying a public-facing government service.',
-    emoji: '🏛️',
-    // src: '/civic-cover.jpg',
-  },
-  {
-    id: 'nonprofit',
-    category: 'work',
-    tag: 'Education · Nonprofit',
-    title: 'Nonprofit Operations Internship',
-    desc: 'Coding curriculum for girls in tech.',
-    emoji: '👩‍💻',
-    // src: '/nonprofit-cover.jpg',
+    tag: 'Civic Tech · Consulting',
+    title: 'AAPI Voter Outreach — Dot Movement Digital',
+    desc: 'Grant research, donor CRM, and multimedia for AAPI Victory Alliance.',
+    emoji: '🗳️',
   },
 
   // ── RESEARCH ──
   {
-    id: 'research',
+    id: 'thurman',
     category: 'research',
-    tag: 'Research',
-    title: 'Research Project Title',
-    desc: 'Short description of your research and what it explored.',
+    tag: 'Policy · Legal Tech',
+    title: 'EZ Merge — Thurman Arnold Project',
+    desc: 'Building a merger eligibility review web app, presenting to the NY AG Office.',
+    emoji: '⚖️',
+  },
+  {
+    id: 'ub-neural',
+    category: 'research',
+    tag: 'Research · Machine Learning',
+    title: 'Neural Network Action Prediction — UB Esfahani Lab',
+    desc: 'Used ATARI-Head eye gaze data to predict player actions via neural networks.',
+    emoji: '🧠',
+  },
+  {
+    id: 'ub-carbon',
+    category: 'research',
+    tag: 'Research · Environmental',
+    title: 'Carbon Capture Research — UB Lin Lab',
+    desc: 'Sorbent modification research presented internationally at Ritsumeikan University, Japan.',
+    emoji: '⚗️',
+  },
+  {
+    id: 'roswell',
+    category: 'research',
+    tag: 'Research · Cancer Biology',
+    title: 'ST6GAL1 & Breast Cancer — Roswell Park',
+    desc: 'NIH-funded research on triple-negative breast cancer metastasis.',
     emoji: '🔬',
-    // src: '/research-cover.jpg',
+  },
+  {
+    id: 'microplastics',
+    category: 'research',
+    tag: 'Research · Environmental',
+    title: 'Ionization & PET Microplastics',
+    desc: '1st place Best Poster & Presentation at international science fair.',
+    emoji: '🧪',
   },
 
-  // ── CODING ──
+  // ── CODING & PROJECTS ──
   {
-    id: 'coding-1',
+    id: 'cryptic',
     category: 'coding',
-    tag: 'Class Project · CS',
-    title: 'Coding Project One',
-    desc: 'What you built and what it does.',
-    emoji: '💻',
-    // src: '/coding1-cover.jpg',
+    tag: 'NLP · Machine Learning',
+    title: 'The Minute Cryptic Decrypted',
+    desc: 'Two-stage ML pipeline to solve cryptic crossword puzzles. 69% classification accuracy.',
+    emoji: '✏️',
   },
   {
-    id: 'coding-2',
+    id: 'covid-website',
     category: 'coding',
-    tag: 'Class Project · CS',
-    title: 'Coding Project Two',
-    desc: 'What you built and what it does.',
-    emoji: '⌨️',
-    // src: '/coding2-cover.jpg',
+    tag: 'Health Equity · Web',
+    title: 'COVID-19 Misconceptions Website — Weill Cornell',
+    desc: 'Built a capstone website addressing vaccine misinformation for diverse communities.',
+    emoji: '🌐',
   },
-
-  // ── HACKATHON ──
   {
-    id: 'hackathon',
-    category: 'hackathon',
-    tag: 'Hackathon',
-    title: 'Hackathon Project Title',
-    desc: 'What you built, the problem you solved, and how long you had.',
-    emoji: '⚡',
-    // src: '/hackathon-cover.jpg',
+    id: 'kwk-web',
+    category: 'coding',
+    tag: 'Web · HTML/CSS/JS',
+    title: 'Medical Disparities Website — Kode with Klossy 2021',
+    desc: 'First shipped project — a website on medical disparities built with HTML, CSS, and JS.',
+    emoji: '🩺',
   },
 ]
 
 const VOLUNTEER = [
-  { name: 'Organization / Club Name', role: 'Your role', emoji: '🌱' },
-  { name: 'Organization / Club Name', role: 'Your role', emoji: '🤝' },
-  { name: 'Organization / Club Name', role: 'Your role', emoji: '📣' },
-  { name: 'Organization / Club Name', role: 'Your role', emoji: '🎓' },
+  { name: 'Chinese American Student Association', role: 'Vice President', emoji: '🏮' },
+  { name: 'Queer + Asian @ Yale', role: 'Treasurer', emoji: '🌈' },
+  { name: 'Volunteer Income Tax Coordinator', role: 'Volunteer', emoji: '💰' },
+  { name: 'New Haven Community Health Care Van', role: 'Volunteer', emoji: '💉' },
+  { name: 'Yale Pathways to Science', role: 'Volunteer', emoji: '🧪' },
+  { name: 'HARVEST - Yale Sustainable Food Program', role: 'Freshman Orientation Leader', emoji: '👩🏻‍🌾' }
 ]
 
 function ProjectTile({ project }) {
@@ -109,20 +141,18 @@ export default function Projects() {
     ? PROJECTS
     : PROJECTS.filter(p => p.category === active)
 
-  const showVolunteer = active === 'all' || active === 'volunteer'
+  const showVolunteer = active === 'all' || active === 'leadership'
 
   return (
     <main className="projects-page">
 
-      {/* ── HEADER ── */}
       <div>
-        <h1>work & projects ✦</h1>
+        <h1>projects ✦</h1>
         <p className="projects-page__sub">
-          Internships, research, class projects, and more.
+          Internships, research, class projects, and hopefully more to come!
         </p>
       </div>
 
-      {/* ── FILTER TABS ── */}
       <div className="proj-filters">
         {CATEGORIES.map(cat => (
           <button
@@ -135,19 +165,17 @@ export default function Projects() {
         ))}
       </div>
 
-      {/* ── PROJECT GRID ── */}
       {filtered.length > 0 && (
         <div className="projects-grid-2">
           {filtered.map(p => <ProjectTile key={p.id} project={p} />)}
         </div>
       )}
 
-      {/* ── VOLUNTEER SECTION ── */}
       {showVolunteer && (
         <div className="volunteer-section">
-          <h2 className="volunteer-heading">volunteering & groups ✦</h2>
+          <h2 className="volunteer-heading">groups & involvement ✦</h2>
           <p className="muted" style={{ marginBottom: '1.5rem' }}>
-            Organizations and communities I'm part of.
+            Organizations and communities I love:
           </p>
           <div className="volunteer-grid">
             {VOLUNTEER.map((v, i) => (

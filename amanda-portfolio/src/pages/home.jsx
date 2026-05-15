@@ -87,7 +87,6 @@ export default function Home() {
           </Link>
         </div>
       </div>
-
       {/* ── FEATURED WORK ── */}
       <Section>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
@@ -128,6 +127,8 @@ export default function Home() {
           </div>
         </div>
       </Section>
+
+      
 
     </main>
   )
