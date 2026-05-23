@@ -167,7 +167,7 @@ export default function Home() {
           <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', color: 'white', marginBottom: '1rem', lineHeight: 1.2 }}>
             Let's make something<br />worth remembering.
           </h2>
-          <a href="mailto:you@email.com" className="btn" style={{ background: 'white', color: 'var(--navy)' }}>
+          <a href="mailto:amanda.huang@yale.edu" className="btn" style={{ background: 'white', color: 'var(--navy)' }}>
             get in touch →
           </a>
         </div>
