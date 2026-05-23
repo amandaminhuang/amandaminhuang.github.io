@@ -141,16 +141,16 @@ export default function About() {
           <div className="about-bio-text">
             <h2>Hi there! I'm Amanda, and I want to be a vehicle for technology, creativity, and social impact.</h2>
             <p>
-            I am an undergraduate at Yale University pursuing a B.S. in Statistics & Data Science with a Certificate in Computing, Culture, & Society.  I've discovered that I'm passionate about leveraging data and technology to solve complex problems and I want to apply these skills to challenges that directly impact our communities. 
+            I am an first generation student at Yale University pursuing a B.S. in Statistics & Data Science with a Certificate in Computing, Culture, & Society.  I've discovered that I'm passionate about leveraging data and technology to solve complex problems and I want to apply these skills to challenges that directly impact our communities. 
             </p>
             <p>
-              At my core, I am curious and driven to understand how everything and everyone is interconnected. By analyzing trends in data, talking directly with my clients, and drawing inspiration from eclectic sources, I love being able to visualize and implement solutions tailored to each problem. 
+              At my core, I am curious and driven to understand how everything and everyone is interconnected. By analyzing trends in data, talking directly with leaders, and drawing inspiration from eclectic sources, I love being able to visualize and implement solutions tailored to each problem. 
             </p>
             <p>
               I have been so lucky to work on teams bringing missions to life across{' '}
               <span className="highlight">Asian American civic advocacy</span>,{' '}
               <span className="highlight">women & gender minority empowerment in tech</span>, and{' '}
-              <span className="highlight">federal policy</span>, and so excited to continue to learn from different perspectives. 
+              <span className="highlight">federal policy</span>, and so excited to continue to learn from different perspectives. Outside of my work I love to make coffees, travel, and play bananagrams!
             </p>
 
      
@@ -163,44 +163,6 @@ export default function About() {
           </div>
         </div>
       </Reveal>
-
-
-      {/* ── THINGS I LOVE ── */}
-      <div className="about-loves">
-        <div className="about-loves-inner">
-          <Reveal>
-            <h2>Other things I <em>loveeeeeeeeee</em> ♥</h2>
-            <div className="about-loves-grid">
-              <p>
-                I'm a big fan of puzzles in all forms —{' '}
-                <span className="highlight">mini cryptic crosswords</span>, logic games,
-                anything where the answer clicks into place satisfyingly. I also love
-                being outside: pickleball, long walks, any excuse to not be at a desk.
-              </p>
-              <p>
-                You can catch me in a coffee shop with a cold brew and three open books,
-                none of them finished. Current obsessions:{' '}
-                <span className="highlight">pickleball strategy</span>, neat design
-                systems, and finding the best hole-in-the-wall restaurants.
-              </p>
-            </div>
-
-            <div className="about-things">
-              {THINGS.map(t => (
-                <div key={t.label} className="about-thing" title={t.note}>
-                  <span>{t.emoji}</span>
-                  {t.label}
-                </div>
-              ))}
-            </div>
-          </Reveal>
-
-          {/* ── CAROUSEL ── */}
-          <Reveal style={{ marginTop: '2.5rem' }}>
-            <Carousel />
-          </Reveal>
-        </div>
-      </div>
 
       {/* ── BOOKSHELF ── */}
       <Reveal>

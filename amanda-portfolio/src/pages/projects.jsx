@@ -94,19 +94,21 @@ const PROJECTS = [
     desc: 'Built a capstone website addressing vaccine misinformation for diverse communities.',
     emoji: '🌐',
   },
-  {
-    id: 'kwk-web',
-    category: 'coding',
-    tag: 'Web · HTML/CSS/JS',
-    title: 'Medical Disparities Website — Kode with Klossy 2021',
-    desc: 'First shipped project — a website on medical disparities built with HTML, CSS, and JS.',
-    emoji: '🩺',
-  },
+  // {
+  //   id: 'kwk-web',
+  //   category: 'coding',
+  //   tag: 'Web · HTML/CSS/JS',
+  //   title: 'Medical Disparities Website — Kode with Klossy 2021',
+  //   desc: 'First shipped project — a website on medical disparities built with HTML, CSS, and JS.',
+  //   emoji: '🩺',
+  // },
 ]
 
 const VOLUNTEER = [
   { name: 'Chinese American Student Association', role: 'Vice President', emoji: '🏮' },
   { name: 'Queer + Asian @ Yale', role: 'Treasurer', emoji: '🌈' },
+  { name: 'Yale Computer Society', role: 'Events Director', emoji: '💻' },
+  { name: "Women's Leadership Initiative", role: 'Vice President', emoji: '👩🏻‍💼' },
   { name: 'Volunteer Income Tax Coordinator', role: 'Volunteer', emoji: '💰' },
   { name: 'New Haven Community Health Care Van', role: 'Volunteer', emoji: '💉' },
   { name: 'Yale Pathways to Science', role: 'Volunteer', emoji: '🧪' },
@@ -149,7 +151,7 @@ export default function Projects() {
       <div>
         <h1>projects ✦</h1>
         <p className="projects-page__sub">
-          Internships, research, class projects, and hopefully more to come!
+          a constantly updating pile of works!
         </p>
       </div>
 

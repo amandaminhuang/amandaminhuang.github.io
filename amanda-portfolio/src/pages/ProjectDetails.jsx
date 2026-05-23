@@ -1,6 +1,40 @@
 import { useState, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
 
+// ── HOW TO ADD CONTENT ────────────────────────────────────────────────────────
+//
+// SLIDES: Replace placeholders with real images:
+//   { type: 'image', src: '/images/your-image.jpg', caption: 'Caption' }
+//   or keep placeholders until you have images:
+//   { type: 'placeholder', bg: '#EDF4FB', emoji: '⚙️', caption: 'Caption' }
+//
+// EMBED: Add an iframe embed (Google Slides, PDF, Figma) below all sections.
+//   embed: {
+//     type: 'slides',   // 'slides' | 'pdf' | 'figma' — just changes the label
+//     src: 'https://docs.google.com/presentation/d/YOUR_ID/embed',
+//     label: 'View the full deck',   // optional, overrides default label
+//   }
+//   For Google Slides: File → Share → Publish to web → Embed → copy the src URL
+//   For PDFs in /public: src: '/your-file.pdf'
+//   For Figma: Share → Get embed code → copy the src URL
+//
+// LINKS: Buttons that open in a new tab (for live sites, papers, repos, etc.)
+//   links: [
+//     { label: 'Live site →', href: 'https://...' },
+//     { label: 'Read the paper →', href: '/paper.pdf' },
+//     { label: 'Code on request', href: 'mailto:you@email.com' },
+//   ]
+//
+// SECTIONS: Each project has up to 3 sections. All fields optional except label/heading.
+//   {
+//     label: 'The premise',   // small uppercase label
+//     heading: 'Big h2 here',
+//     body: 'Paragraph text.',
+//     callout: '"Optional pull quote in italics."',  // omit if not needed
+//   }
+//
+// ─────────────────────────────────────────────────────────────────────────────
+
 const WORK_STUDIES = {
 
   'kwk-ops': {
@@ -37,6 +71,8 @@ const WORK_STUDIES = {
         body: 'I came in with opinions about what tools would work. The team had constraints I hadn\'t anticipated — budget, training bandwidth, existing workflows. That gap between "technically optimal" and "practically adoptable" is something I think about in every product context now.',
       },
     ],
+    // embed: { type: 'slides', src: 'https://docs.google.com/presentation/d/YOUR_ID/embed' },
+    // links: [{ label: 'View the deck →', href: 'https://...' }],
     prev: 'deloitte',
     next: 'sacm',
   },
@@ -75,6 +111,8 @@ const WORK_STUDIES = {
         body: 'Getting to a 78% cost reduction finding was the easy part. Getting leadership to act on it required translating technical platform comparisons into business terms, anticipating objections, and sequencing the argument carefully.',
       },
     ],
+    // embed: { type: 'slides', src: 'https://docs.google.com/presentation/d/YOUR_ID/embed' },
+    // links: [{ label: 'View the deck →', href: 'https://...' }],
     prev: 'kwk-ops',
     next: 'civic',
   },
@@ -113,6 +151,8 @@ const WORK_STUDIES = {
         body: 'Every deliverable I touched was downstream of a larger question: whose voice gets amplified? This was where I learned that product thinking and civic impact aren\'t separate tracks.',
       },
     ],
+    // embed: { type: 'slides', src: 'https://docs.google.com/presentation/d/YOUR_ID/embed' },
+    // links: [{ label: 'View the Yahoo ad →', href: 'https://...' }],
     prev: 'sacm',
     next: 'thurman',
   },
@@ -143,10 +183,11 @@ const WORK_STUDIES = {
       {
         label: 'What I built',
         heading: 'Research the law. Build the tool. Present to the AGs.',
-        body: "I conducted economic and regulatory research on HSR Act compliance for mergers under $133.9M, focusing on competitive effects in consumer-critical industries: Dialysis Clinics, Grocery Stores, Pharmacies, Nursing Homes, Daycares, Funeral Homes, and Physicians Clinics. I\'m helping develop EZ Merge — a tool that allows parties to submit merger transactions for eligibility review by a personalized algorithm. Additionally, drafted up a Statute for EZ-Merge enabling States and the FTC to have flexibility over the algorithm and flagging harmful mergers. Our team presented our 3 deliverables to 20+ Attorneys General, state enforcers, and economists at the NYS Attorney General's Office. Code is avaliable on request.",
+        body: 'I conducted economic and regulatory research on HSR Act compliance for mergers under $133.9M, focusing on competitive effects in consumer-critical industries: Dialysis Clinics, Grocery Stores, Pharmacies, Nursing Homes, Daycares, Funeral Homes, and Physicians Clinics. I\'m helping develop EZ Merge — a tool that allows parties to submit merger transactions for eligibility review by a personalized algorithm. I additionally drafted a Statute for EZ Merge enabling States and the FTC to have flexibility over the algorithm and flag harmful mergers. Our team presented 3 deliverables to 20+ Attorneys General, state enforcers, and economists at the NYS Attorney General\'s Office. Code available on request.',
       },
-
     ],
+    // embed: { type: 'slides', src: 'https://docs.google.com/presentation/d/YOUR_ID/embed' },
+    links: [{ label: 'Request the code →', href: 'mailto:you@email.com' }],
     prev: 'civic',
     next: 'ub-neural',
   },
@@ -185,6 +226,8 @@ const WORK_STUDIES = {
         body: 'Noisy gaze data, inconsistent frame alignment, edge cases in gameplay — these upstream problems determined more of the outcome than any architectural choice I made. Start with the data, not the model.',
       },
     ],
+    // embed: { type: 'pdf', src: '/ub-neural-paper.pdf' },
+    // links: [{ label: 'Read the paper →', href: '/ub-neural-paper.pdf' }],
     prev: 'thurman',
     next: 'ub-carbon',
   },
@@ -223,6 +266,8 @@ const WORK_STUDIES = {
         body: 'The questions I got from Japanese researchers pushed me to articulate assumptions I hadn\'t known I was making. That pressure-testing across languages and scientific traditions made the work better.',
       },
     ],
+    // embed: { type: 'slides', src: 'https://docs.google.com/presentation/d/YOUR_ID/embed' },
+    // links: [{ label: 'View the poster →', href: '/carbon-poster.pdf' }],
     prev: 'ub-neural',
     next: null,
   },
@@ -263,6 +308,8 @@ const LEADERSHIP_STUDIES = {
         body: 'Running the bootcamp with PM instincts — thinking about student experience end-to-end, iterating on curriculum, treating recruitment like user acquisition — made every phase sharper.',
       },
     ],
+    // embed: { type: 'slides', src: 'https://docs.google.com/presentation/d/YOUR_ID/embed' },
+    // links: [{ label: 'Visit the bootcamp →', href: 'https://...' }],
     prev: null,
     next: 'ycs-apps',
   },
@@ -301,6 +348,8 @@ const LEADERSHIP_STUDIES = {
         body: 'Clarity at the moment of discovery is as important as any feature you build. The apps that get used are the ones easiest to understand in the first thirty seconds.',
       },
     ],
+    // embed: { type: 'slides', src: 'https://docs.google.com/presentation/d/YOUR_ID/embed' },
+    // links: [{ label: 'Try the app →', href: 'https://...' }],
     prev: 'ycs-bootcamp',
     next: 'casa',
   },
@@ -339,6 +388,8 @@ const LEADERSHIP_STUDIES = {
         body: 'CASA taught me that leadership is mostly about clarity: clear expectations, clear deadlines, clear accountability. When those things are in place, the work happens.',
       },
     ],
+    // embed: { type: 'slides', src: 'https://docs.google.com/presentation/d/YOUR_ID/embed' },
+    // links: [{ label: 'Read the newsletter →', href: 'https://...' }],
     prev: 'ycs-apps',
     next: null,
   },
@@ -379,6 +430,7 @@ const SCHOOL_STUDIES = {
         body: 'Anagrams hit 100% recall in classification but struggled at solving. Hidden puzzles were the opposite: perfect solve rate once correctly classified, but weak at classification. The pipeline worked — unevenly, honestly, and in ways that taught us more about the task than the results alone.',
       },
     ],
+    // embed: { type: 'pdf', src: '/cryptic-paper.pdf' },
     links: [{ label: 'Read the paper →', href: '/cryptic-paper.pdf' }],
     prev: null,
     next: 'roswell',
@@ -418,6 +470,8 @@ const SCHOOL_STUDIES = {
         body: 'Every control condition, every replication — that discipline was respect for the people this research might one day affect. Build carefully, test honestly, don\'t skip steps.',
       },
     ],
+    // embed: { type: 'pdf', src: '/roswell-poster.pdf' },
+    // links: [{ label: 'View the poster →', href: '/roswell-poster.pdf' }],
     prev: 'cryptic',
     next: 'microplastics',
   },
@@ -456,6 +510,8 @@ const SCHOOL_STUDIES = {
         body: 'No lab infrastructure, no team, no established protocol. I had to figure out the experimental design myself and make judgment calls at every step.',
       },
     ],
+    // embed: { type: 'pdf', src: '/microplastics-poster.pdf' },
+    // links: [{ label: 'View the poster →', href: '/microplastics-poster.pdf' }],
     prev: 'roswell',
     next: 'covid-website',
   },
@@ -494,6 +550,8 @@ const SCHOOL_STUDIES = {
         body: 'Figuring out how to present information in a way that felt trustworthy and relevant to communities with real reasons for skepticism — that was the challenge. Accuracy isn\'t enough if the framing creates distance.',
       },
     ],
+    // embed: { type: 'slides', src: 'https://your-site-url.com' },
+    // links: [{ label: 'Visit the website →', href: 'https://...' }],
     prev: 'microplastics',
     next: 'kwk-web',
   },
@@ -532,6 +590,7 @@ const SCHOOL_STUDIES = {
         body: 'The website wasn\'t flawless. But it was real and said something we cared about. That\'s why I keep coming back to projects at the intersection of technology and social impact.',
       },
     ],
+    // links: [{ label: 'Visit the site →', href: 'https://...' }],
     prev: 'covid-website',
     next: 'kwk-app',
   },
@@ -570,6 +629,7 @@ const SCHOOL_STUDIES = {
         body: 'A small screen, a finite battery, a distracted user — mobile design forces you to be ruthless about what matters. That discipline carries into every project.',
       },
     ],
+    // links: [{ label: 'View the app →', href: 'https://...' }],
     prev: 'kwk-web',
     next: 'chicago-bikes',
   },
@@ -608,6 +668,7 @@ const SCHOOL_STUDIES = {
         body: 'Choosing the right map projection, color scale, and aggregation weren\'t aesthetic decisions — they were rhetorical ones. This sharpened my instinct for the difference between data that\'s accurate and data that\'s actionable.',
       },
     ],
+    // links: [{ label: 'View the maps →', href: 'https://...' }],
     prev: 'kwk-app',
     next: null,
   },
@@ -615,6 +676,14 @@ const SCHOOL_STUDIES = {
 
 const ALL_STUDIES = { ...WORK_STUDIES, ...LEADERSHIP_STUDIES, ...SCHOOL_STUDIES }
 
+// ── EMBED LABEL DEFAULTS ──────────────────────────────────────────────────────
+const EMBED_LABELS = {
+  slides: 'Slideshow',
+  pdf:    'Document',
+  figma:  'Figma prototype',
+}
+
+// ── SLIDESHOW ─────────────────────────────────────────────────────────────────
 function SlideShow({ slides }) {
   const [current, setCurrent] = useState(0)
 
@@ -667,6 +736,38 @@ function SlideShow({ slides }) {
   )
 }
 
+// ── EMBED BLOCK ───────────────────────────────────────────────────────────────
+function EmbedBlock({ embed }) {
+  const label = embed.label ?? EMBED_LABELS[embed.type] ?? 'View'
+  const height = embed.type === 'pdf' ? '700px' : '480px'
+
+  return (
+    <div className="detail-embed">
+      <div className="detail-embed__header">
+        <p className="detail-section__label" style={{ marginBottom: 0 }}>{label}</p>
+        <a
+          href={embed.src}
+          target="_blank"
+          rel="noreferrer"
+          className="link--accent"
+          style={{ fontSize: '0.82rem' }}
+        >
+          open full screen ↗
+        </a>
+      </div>
+      <iframe
+        src={embed.src}
+        width="100%"
+        height={height}
+        style={{ border: 'none', borderRadius: '12px', display: 'block' }}
+        allowFullScreen
+        title={label}
+      />
+    </div>
+  )
+}
+
+// ── PAGE ──────────────────────────────────────────────────────────────────────
 export default function ProjectDetails() {
   const { id } = useParams()
   const p = ALL_STUDIES[id]
@@ -718,14 +819,18 @@ export default function ProjectDetails() {
           </div>
         ))}
 
-        {/* ── LINKS ── */}
+        {/* ── EMBED (inline iframe) ── */}
+        {p.embed && <EmbedBlock embed={p.embed} />}
+
+        {/* ── LINKS (external buttons) ── */}
         {p.links && p.links.length > 0 && (
           <div style={{
             display: 'flex',
             gap: '0.75rem',
             flexWrap: 'wrap',
             padding: '1.5rem 0',
-            borderTop: '1.5px solid var(--border)',
+            borderTop: p.embed ? 'none' : '1.5px solid var(--border)',
+            marginTop: p.embed ? '0' : undefined,
             marginBottom: '2rem',
           }}>
             {p.links.map(link => (
