@@ -683,59 +683,6 @@ const EMBED_LABELS = {
   figma:  'Figma prototype',
 }
 
-// ── SLIDESHOW ─────────────────────────────────────────────────────────────────
-function SlideShow({ slides }) {
-  const [current, setCurrent] = useState(0)
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrent(i => (i + 1) % slides.length)
-    }, 3500)
-    return () => clearInterval(timer)
-  }, [slides.length])
-
-  const prev = () => setCurrent(i => (i - 1 + slides.length) % slides.length)
-  const next = () => setCurrent(i => (i + 1) % slides.length)
-
-  return (
-    <div className="detail-header">
-      <div
-        className="detail-header__track"
-        style={{ transform: `translateX(-${current * 100}%)` }}
-      >
-        {slides.map((slide, i) => (
-          <div
-            key={i}
-            className="detail-header__slide"
-            style={{ background: slide.type === 'placeholder' ? slide.bg : undefined }}
-          >
-            {slide.type === 'image'
-              ? <img src={slide.src} alt={slide.caption} />
-              : <>
-                  <span style={{ fontSize: '4rem' }}>{slide.emoji}</span>
-                  <span style={{ fontSize: '0.9rem', opacity: 0.7, letterSpacing: '0.08em' }}>
-                    {slide.caption}
-                  </span>
-                </>
-            }
-          </div>
-        ))}
-      </div>
-      <button className="detail-header__btn detail-header__btn--prev" onClick={prev}>←</button>
-      <button className="detail-header__btn detail-header__btn--next" onClick={next}>→</button>
-      <div className="detail-header__dots">
-        {slides.map((_, i) => (
-          <button
-            key={i}
-            className={`detail-header__dot ${i === current ? 'detail-header__dot--active' : ''}`}
-            onClick={() => setCurrent(i)}
-          />
-        ))}
-      </div>
-    </div>
-  )
-}
-
 // ── EMBED BLOCK ───────────────────────────────────────────────────────────────
 function EmbedBlock({ embed }) {
   const label = embed.label ?? EMBED_LABELS[embed.type] ?? 'View'
@@ -781,7 +728,6 @@ export default function ProjectDetails() {
 
   return (
     <main className="detail-page">
-      <SlideShow slides={p.slides} />
 
       <div className="detail-body">
 
