@@ -10,14 +10,14 @@ const CATEGORIES = [
 
 const PROJECTS = [
   // ── WORK & INTERNSHIPS ──
-  {
-    id: 'kwk-ops',
-    category: 'work',
-    tag: 'Operations · Nonprofit',
-    title: 'AI & Technology Strategy — Kode with Klossy',
-    desc: 'Led AI outreach strategy and platform management for a nonprofit serving thousands of young women.',
-    emoji: '⚙️',
-  },
+  // {
+  //   id: 'kwk-ops',
+  //   category: 'work',
+  //   tag: 'Operations · Nonprofit',
+  //   title: 'AI & Technology Strategy — Kode with Klossy',
+  //   desc: 'Led AI outreach strategy and platform management for a nonprofit serving thousands of young women.',
+  //   emoji: '⚙️',
+  // },
   {
     id: 'sacm',
     category: 'work',
@@ -44,14 +44,14 @@ const PROJECTS = [
     desc: 'Building a merger eligibility review web app, presenting to the NY AG Office.',
     emoji: '⚖️',
   },
-  {
-    id: 'ub-neural',
-    category: 'research',
-    tag: 'Research · Machine Learning',
-    title: 'Neural Network Action Prediction — UB Esfahani Lab',
-    desc: 'Used ATARI-Head eye gaze data to predict player actions via neural networks.',
-    emoji: '🧠',
-  },
+  // {
+  //   id: 'ub-neural',
+  //   category: 'research',
+  //   tag: 'Research · Machine Learning',
+  //   title: 'Neural Network Action Prediction — UB Esfahani Lab',
+  //   desc: 'Used ATARI-Head eye gaze data to predict player actions via neural networks.',
+  //   emoji: '🧠',
+  // },
   {
     id: 'ub-carbon',
     category: 'research',
@@ -73,7 +73,7 @@ const PROJECTS = [
     category: 'research',
     tag: 'Research · Environmental',
     title: 'Ionization & PET Microplastics',
-    desc: '1st place Best Poster & Presentation at international science fair.',
+    desc: '1st place Best Poster & Presentation at the International Student Science Fair.',
     emoji: '🧪',
   },
 

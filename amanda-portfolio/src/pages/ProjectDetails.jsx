@@ -19,20 +19,15 @@ const WORK_STUDIES = {
       { type: 'placeholder', bg: '#EEF2F7', emoji: '📈', caption: 'Impact' },
     ],
     intro: 'Nonprofits don\'t have the luxury of wasted effort. At Kode with Klossy, I\'ve been figuring out how AI tools can do more of the operational heavy lifting — so the humans can focus on the mission.',
-    stats: [
-      { num: 'Clay', label: 'AI outreach tool evaluated' },
-      { num: '2',    label: 'Platforms managed' },
-      { num: '↑',    label: 'Outreach efficiency' },
-    ],
     sections: [
       {
-        label: 'The problem',
+        label: 'The premise',
         heading: 'Outreach at scale is a systems problem.',
         body: 'Kode with Klossy reaches thousands of young women across the country. But grassroots outreach — the kind that actually builds community — doesn\'t scale automatically. I was brought in to think through how AI tools could extend the team\'s reach without losing the personal touch that makes the program work.',
         callout: '"The goal wasn\'t automation for its own sake. It was buying back time for the work that can\'t be automated."',
       },
       {
-        label: 'What I did',
+        label: 'What I built',
         heading: 'Evaluate, present, implement.',
         body: 'I led an AI and technology strategy project focused on enhancing grassroots outreach efficiency and nonprofit visibility. I researched and presented on the cost and effectiveness of tools like Clay, and drafted frameworks for outreach using Airtable. In parallel, I supervised technology management and scholar meals logistics interfaces.',
       },
@@ -62,20 +57,15 @@ const WORK_STUDIES = {
       { type: 'placeholder', bg: '#E8EDE0', emoji: '✅', caption: 'Outcomes' },
     ],
     intro: 'A 78% cost reduction isn\'t found — it\'s built. At SACM, I ran the research, facilitated the demos, and presented the findings that made it visible.',
-    stats: [
-      { num: '78%', label: 'Cost reduction identified' },
-      { num: '2',   label: 'Platforms evaluated' },
-      { num: '1',   label: 'Exec presentation delivered' },
-    ],
     sections: [
       {
-        label: 'The problem',
+        label: 'The premise',
         heading: 'The firm\'s tools weren\'t keeping up with its ambitions.',
         body: 'Service Academy Capital Management needed to evaluate whether its current wealth management platforms were still the right fit. That meant getting into the weeds on Black Diamond and Advyzon, understanding the tradeoffs, and making a case to executive leadership.',
         callout: '"The 78% wasn\'t a rounding error. It was the difference between what they were paying and what they should have been."',
       },
       {
-        label: 'What I did',
+        label: 'What I built',
         heading: 'Research, demo, present, repeat.',
         body: 'I evaluated wealth management platforms including Black Diamond and Advyzon, facilitated live demos with firm members, and synthesized findings into a presentation for executive management. I also completed SACMGT training in core wealth management competencies.',
       },
@@ -105,20 +95,15 @@ const WORK_STUDIES = {
       { type: 'placeholder', bg: '#E8EDE0', emoji: '✅', caption: 'Impact' },
     ],
     intro: 'Civic engagement doesn\'t start with ballots — it starts with trust. At Dot Movement Digital, I worked on the infrastructure behind AAPI voter outreach.',
-    stats: [
-      { num: '500+', label: 'Donors organized in CRM' },
-      { num: '3',    label: 'Grant sectors researched' },
-      { num: '1',    label: 'Yahoo ad debuted at AAJA' },
-    ],
     sections: [
       {
-        label: 'The problem',
+        label: 'The premise',
         heading: 'Civic infrastructure is invisible — until it breaks.',
         body: 'AAPI Victory Alliance had the mission and the momentum. What they needed was operational muscle: a donor database that actually worked, grant proposals that could compete, and outreach materials that spoke to the communities they were trying to reach.',
         callout: '"Voter outreach without infrastructure is just noise. We were building the signal."',
       },
       {
-        label: 'What I did',
+        label: 'What I built',
         heading: 'Research, build, ship — then do it again.',
         body: 'I conducted grant research across health, environment, and voter mobilization sectors. I worked with the Executive Director of AAPI Victory Alliance to organize a 500+ donor CRM database, redesigned curriculum materials using Adobe Illustrator, and produced a Yahoo advertisement that premiered at the AAJA conference.',
       },
@@ -134,12 +119,12 @@ const WORK_STUDIES = {
 
   thurman: {
     tag: 'Policy · Legal Tech',
-    title: 'EZ Merge: merger eligibility review app — Thurman Arnold Project',
+    title: 'EZ Merge: Merger Eligibility Review Tool — Thurman Arnold Project',
     meta: [
       { label: 'My role',  value: 'Student Researcher' },
       { label: 'Timeline', value: 'October 2025 – Present' },
       { label: 'Team',     value: '6 student researchers + PI' },
-      { label: 'Methods',  value: 'Regulatory Research · Web App Development · Policy Analysis' },
+      { label: 'Methods',  value: 'Product Management · Regulatory Research · Policy Analysis' },
     ],
     slides: [
       { type: 'placeholder', bg: '#EEF2F7', emoji: '⚖️', caption: 'The project' },
@@ -147,29 +132,20 @@ const WORK_STUDIES = {
       { type: 'placeholder', bg: '#F7E1C3', emoji: '💻', caption: 'EZ Merge app' },
       { type: 'placeholder', bg: '#E8EDE0', emoji: '🏛️', caption: 'NY AG presentation' },
     ],
-    intro: 'Most merger reviews involve lawyers, spreadsheets, and a lot of back-and-forth. EZ Merge is our attempt to make that process legible.',
-    stats: [
-      { num: '$133.9M',  label: 'HSR threshold analyzed' },
-      { num: '6',        label: 'Student researchers' },
-      { num: 'May 2026', label: 'NY AG presentation' },
-    ],
+    intro: 'The Hart-Scott-Rodino Act is calibrated for national markets. Local ones fall through the cracks. EZ Merge is our attempt to fix that.',
     sections: [
       {
-        label: 'The problem',
+        label: 'The premise',
         heading: 'Merger compliance is opaque — and that has consequences.',
-        body: 'The Hart-Scott-Rodino Act requires parties to notify the FTC and DOJ before completing certain mergers. For smaller transactions, figuring out whether you even need to file is a complex, lawyer-dependent process with real costs.',
-        callout: '"If the compliance process is only legible to expensive lawyers, it isn\'t really serving the public."',
+        body: 'The Hart Scott Rodino Act requires companies to notify the FTC and DOJ of their intent to merge. But the threshold is set at the national level and fails to capture competitive dynamics in local markets. While states have created their own reporting thresholds, these create challenges for both businesses and government agencies. The question we started with: can we build a tool to flag potentially dangerous local mergers before they close?',
+        callout: '"Can we develop a tool to flag potentially dangerous local mergers and acquisitions?"',
       },
       {
-        label: 'What I did',
-        heading: 'Research the law. Build the tool. Present to the AG.',
-        body: 'I conducted economic and regulatory research on HSR Act compliance for mergers under $133.9M, focusing on competitive effects in consumer-critical industries. I\'m helping develop EZ Merge — a web app that allows parties to submit merger transactions for eligibility review.',
+        label: 'What I built',
+        heading: 'Research the law. Build the tool. Present to the AGs.',
+        body: "I conducted economic and regulatory research on HSR Act compliance for mergers under $133.9M, focusing on competitive effects in consumer-critical industries: Dialysis Clinics, Grocery Stores, Pharmacies, Nursing Homes, Daycares, Funeral Homes, and Physicians Clinics. I\'m helping develop EZ Merge — a tool that allows parties to submit merger transactions for eligibility review by a personalized algorithm. Additionally, drafted up a Statute for EZ-Merge enabling States and the FTC to have flexibility over the algorithm and flagging harmful mergers. Our team presented our 3 deliverables to 20+ Attorneys General, state enforcers, and economists at the NYS Attorney General's Office. Code is avaliable on request.",
       },
-      {
-        label: 'What I learned',
-        heading: 'Good policy tools are also good UX problems.',
-        body: 'Building EZ Merge forced me to think about regulatory compliance as a user experience. The questions sound like product questions because they are. The law is the constraint; clarity is the design goal.',
-      },
+
     ],
     prev: 'civic',
     next: 'ub-neural',
@@ -191,20 +167,15 @@ const WORK_STUDIES = {
       { type: 'placeholder', bg: '#E8EDE0', emoji: '📊', caption: 'Results' },
     ],
     intro: 'Can where you look predict what you\'ll do next? In the Esfahani Lab, I used eye gaze data from ATARI gameplay to find out.',
-    stats: [
-      { num: 'ATARI',  label: 'Head eye gaze dataset' },
-      { num: 'MATLAB', label: 'Primary tool' },
-      { num: '↑',      label: 'Action prediction accuracy' },
-    ],
     sections: [
       {
-        label: 'The question',
+        label: 'The premise',
         heading: 'Eye gaze as a window into decision-making.',
-        body: 'The ATARI-Head dataset captures where human players look while playing classic ATARI games. The hypothesis: gaze patterns carry signal about what action a player is about to take.',
+        body: 'The ATARI-Head dataset captures where human players look while playing classic ATARI games. The hypothesis: gaze patterns carry signal about what action a player is about to take. Eyes move before hands do — the question is whether that pattern is learnable.',
         callout: '"The eyes move before the hands do. The question is whether the pattern is learnable."',
       },
       {
-        label: 'What I did',
+        label: 'What I built',
         heading: 'Build the model. Test the hypothesis.',
         body: 'I used the ATARI-Head eye gaze dataset and MATLAB to create neural network algorithms to predict player actions. This involved data preprocessing, model architecture decisions, training, and evaluation.',
       },
@@ -234,19 +205,14 @@ const WORK_STUDIES = {
       { type: 'placeholder', bg: '#EEF2F7', emoji: '📢', caption: 'Presentation' },
     ],
     intro: 'Climate solutions live and die by material science. In the Lin Lab, I researched how sorbent modification could make carbon capture more effective — and took those findings to Japan.',
-    stats: [
-      { num: 'JST',     label: 'Japan Science & Technology Agency funded' },
-      { num: '1',       label: 'International conference presentation' },
-      { num: 'Lin Lab', label: 'University at Buffalo' },
-    ],
     sections: [
       {
-        label: 'The question',
+        label: 'The premise',
         heading: 'Can we make carbon capture more efficient?',
         body: 'The Lin Lab\'s work focused on how modifying sorbents could improve CO₂ capture rates and integrate more smoothly with renewable energy systems in industrial applications.',
       },
       {
-        label: 'What I did',
+        label: 'What I built',
         heading: 'Research, iterate, present internationally.',
         body: 'I researched sorbent modification capabilities for carbon capture. I was invited to present at a conference at Ritsumeikan University in Japan through the Sakura Science Exchange Program, fully funded by the Japan Science and Technology Agency.',
         callout: '"Being invited to present internationally as an undergraduate researcher was a reminder that the work speaks for itself."',
@@ -279,20 +245,15 @@ const LEADERSHIP_STUDIES = {
       { type: 'placeholder', bg: '#E8EDE0', emoji: '🏛️', caption: '501(c)(3) transition' },
     ],
     intro: 'There was no Y/CS winter bootcamp before we built it. Starting from zero, we recruited from 600+ schools across 20 countries and turned a one-time idea into a nonprofit.',
-    stats: [
-      { num: '600+',      label: 'Schools recruited from' },
-      { num: '20',        label: 'Countries represented' },
-      { num: '501(c)(3)', label: 'Nonprofit status achieved' },
-    ],
     sections: [
       {
-        label: 'The problem',
+        label: 'The premise',
         heading: 'High school students don\'t need inspiration — they need access.',
         body: 'What\'s rare is a structured, rigorous week of CS education built by people who just went through the experience of learning it themselves. That\'s the gap Y/CS\'s first annual winter bootcamp was designed to fill.',
         callout: '"We didn\'t want to run a camp. We wanted to build the kind of camp we wished had existed."',
       },
       {
-        label: 'What I did',
+        label: 'What I built',
         heading: 'Build the program from scratch.',
         body: 'I co-founded Y/CS\'s first annual winter CS bootcamp. I led recruitment from 600+ schools across 20 countries, facilitated the 501(c)(3) transition, and designed workshops and showcases for 100+ student developers and 300+ prospective CS students.',
       },
@@ -322,20 +283,15 @@ const LEADERSHIP_STUDIES = {
       { type: 'placeholder', bg: '#E8EDE0', emoji: '📈', caption: '600+ users' },
     ],
     intro: 'Building the app is one thing. Getting 600+ people to use it in the first week is another. That\'s a distribution problem — and it\'s the one I was responsible for.',
-    stats: [
-      { num: '2',    label: 'Web apps launched' },
-      { num: '600+', label: 'Users in first week' },
-      { num: '↑',    label: 'Student org engagement' },
-    ],
     sections: [
       {
-        label: 'The project',
+        label: 'The premise',
         heading: 'Ship the product. Then get people to use it.',
         body: 'Y/CS launched two web applications for the Yale community. My role was on the growth side — figuring out how to get students to show up, sign up, and engage.',
         callout: '"600+ users in week one didn\'t happen by accident. It happened because we treated marketing as part of the product."',
       },
       {
-        label: 'What I did',
+        label: 'What I built',
         heading: 'Creative, targeted, and fast.',
         body: 'I achieved 600+ users within the first week through targeted campus campaigns across student organizations — coordinating messaging, timing the launch around peak activity, and making the product\'s value immediately legible.',
       },
@@ -365,20 +321,15 @@ const LEADERSHIP_STUDIES = {
       { type: 'placeholder', bg: '#E8EDE0', emoji: '📊', caption: 'Impact' },
     ],
     intro: 'CASA isn\'t just a student org — it\'s community infrastructure for Asian American students at Yale. As VP, I\'ve been responsible for a lot of what keeps it running.',
-    stats: [
-      { num: '1,200+', label: 'Newsletter members (70%+ open rate)' },
-      { num: '$10K',   label: 'Semi-annual budget managed' },
-      { num: '$6K+',   label: 'Raised through tickets & grants' },
-    ],
     sections: [
       {
-        label: 'The role',
+        label: 'The premise',
         heading: 'VP means a lot of different things.',
         body: 'At CASA, VP means running the newsletter, managing the board, overseeing the budget, and making sure events happen. I\'ve published a biweekly newsletter to 1,200+ members at a 70%+ open rate and managed a $10K semi-annual budget.',
         callout: '"A 70% open rate means people are actually reading it. That doesn\'t happen by accident."',
       },
       {
-        label: 'What I did',
+        label: 'What I built',
         heading: 'Lead, write, budget, repeat.',
         body: 'I managed a $10K semi-annual budget, raising $6K+ through ticket sales and grants. I manage a board of 25 members and publish a biweekly newsletter on Asian American issues to 1,200+ readers.',
       },
@@ -410,27 +361,22 @@ const SCHOOL_STUDIES = {
       { type: 'placeholder', bg: '#F0F4FA', emoji: '🔤', caption: 'GloVe semantic ranking' },
     ],
     intro: 'Mini cryptic crosswords are one of my favorite things — so naturally I tried to build a machine that could solve them.',
-    stats: [
-      { num: '69%', label: 'Classification accuracy' },
-      { num: '67%', label: 'Correct answer in candidate list' },
-      { num: '39',  label: 'Hand-labeled puzzles' },
-    ],
     sections: [
       {
-        label: 'The problem',
+        label: 'The premise',
         heading: 'Can a computer solve wordplay?',
-        body: 'Minute Cryptic is a daily crossword where every clue has two parts: a definition and a wordplay mechanism. We wanted to know if a computational pipeline could crack them — and what that reveals about how AI handles human linguistic nuance.',
+        body: 'Minute Cryptic is a daily crossword where every clue has two parts: a definition and a wordplay mechanism. We wanted to know if a computational pipeline could crack them — and what that reveals about how AI handles human linguistic nuance. Success here would signal a deeper grasp of humor and sarcasm, things that remain notoriously difficult for AI.',
         callout: '"Success here would signal a deeper grasp of human humor and sarcasm — nuances that remain notoriously difficult for AI."',
       },
       {
-        label: 'What we built',
+        label: 'What I built',
         heading: 'A two-stage pipeline: classify, then solve.',
-        body: 'We manually collected and labeled 39 puzzles. Our system first classifies the puzzle type using logistic regression with GloVe embeddings, then routes it to a specialized solving algorithm. Cosine similarity ranks candidates to pick the best answer.',
+        body: 'We manually collected and labeled 39 puzzles. Our system first classifies the puzzle type using logistic regression with GloVe embeddings, then routes it to a specialized solving algorithm. Cosine similarity ranks candidates to pick the best answer. We hit 69% classification accuracy — with the correct answer in the candidate list 67% of the time.',
       },
       {
-        label: 'Results & what I learned',
+        label: 'What I learned',
         heading: 'Anagrams loved us. Hiddens did not.',
-        body: 'Anagrams hit 100% recall in classification but struggled at solving. Hidden puzzles were the opposite: perfect solve rate once correctly classified, but weak at classification. Overall 38% end-to-end accuracy, correct answer in candidate list 67% of the time.',
+        body: 'Anagrams hit 100% recall in classification but struggled at solving. Hidden puzzles were the opposite: perfect solve rate once correctly classified, but weak at classification. The pipeline worked — unevenly, honestly, and in ways that taught us more about the task than the results alone.',
       },
     ],
     links: [{ label: 'Read the paper →', href: '/cryptic-paper.pdf' }],
@@ -454,20 +400,15 @@ const SCHOOL_STUDIES = {
       { type: 'placeholder', bg: '#E8EDE0', emoji: '💡', caption: 'Findings' },
     ],
     intro: 'Triple-negative breast cancer is one of the hardest to treat — and one of the least understood. This summer, I tried to understand one small piece of why it spreads.',
-    stats: [
-      { num: 'NIH',  label: 'Funded fellowship' },
-      { num: 'TNBC', label: 'High-mortality subtype studied' },
-      { num: '1',    label: 'Symposium presentation delivered' },
-    ],
     sections: [
       {
-        label: 'The question',
+        label: 'The premise',
         heading: 'What triggers metastasis in triple-negative breast cancer?',
         body: 'My research focused on the glycoprotein ST6GAL1 and its relationship to metastasis — using breast cancer cell lines to identify what triggers cancer cells to spread.',
         callout: '"The question wasn\'t whether ST6GAL1 mattered. The question was how."',
       },
       {
-        label: 'What I did',
+        label: 'What I built',
         heading: 'Experiments, collaboration, and a lot of patience.',
         body: 'I conducted experiments with breast cancer cell lines, collaborated with lab members, used statistical analysis to interpret results, and presented findings at Roswell Park\'s summer research symposium.',
       },
@@ -497,19 +438,14 @@ const SCHOOL_STUDIES = {
       { type: 'placeholder', bg: '#EEF2F7', emoji: '📢', caption: 'Presentation' },
     ],
     intro: 'Microplastics are everywhere — including water we treat and release. I built an ionization-based approach to filter them out more efficiently.',
-    stats: [
-      { num: '1st', label: 'Best Poster Prize' },
-      { num: '1st', label: 'Best Presentation Prize' },
-      { num: '50+', label: 'International schools competing' },
-    ],
     sections: [
       {
-        label: 'The problem',
+        label: 'The premise',
         heading: 'PET microplastics slip through conventional water treatment.',
         body: 'I researched whether ionization — specifically, ionized carbon rods in a parallel plate structure — could improve PET microplastic removal rates in water waste treatment plants.',
       },
       {
-        label: 'What I did',
+        label: 'What I built',
         heading: 'Design, experiment, present internationally.',
         body: 'I designed and ran experiments using ionized carbon rods, analyzed results, and presented at the international competition — winning First Place in Best Poster and Best Presentation among 50+ international schools.',
         callout: '"Winning isn\'t the point. But it confirmed the work was real."',
@@ -540,27 +476,22 @@ const SCHOOL_STUDIES = {
       { type: 'placeholder', bg: '#EEF2F7', emoji: '💉', caption: 'Vaccine equity' },
     ],
     intro: 'Vaccine hesitancy is a response to a system that hasn\'t always been trustworthy. This capstone project tried to meet communities where they actually were.',
-    stats: [
-      { num: '1',   label: 'Website shipped as capstone' },
-      { num: '↑',   label: 'Health equity focus' },
-      { num: 'WCM', label: 'Weill Cornell Medicine' },
-    ],
     sections: [
       {
-        label: 'The context',
+        label: 'The premise',
         heading: 'Misinformation travels faster than facts.',
-        body: 'COVID-19 misinformation spread rapidly through communities historically underserved by public health institutions. I built something to help.',
+        body: 'COVID-19 misinformation spread rapidly through communities historically underserved by public health institutions. If a website about vaccines only reaches people who already trust vaccines, it isn\'t doing the work.',
         callout: '"If a website about vaccines only reaches people who already trust vaccines, it\'s not doing the work."',
       },
       {
-        label: 'What I did',
+        label: 'What I built',
         heading: 'Learn the science. Build the communication.',
         body: 'I co-created a website addressing common misconceptions about COVID-19, vaccinations, and health equity — designed to empower diverse communities to make informed decisions.',
       },
       {
         label: 'What I learned',
         heading: 'Science communication is a design problem.',
-        body: 'Figuring out how to present information in a way that felt trustworthy and relevant to communities with real reasons for skepticism — that was the challenge.',
+        body: 'Figuring out how to present information in a way that felt trustworthy and relevant to communities with real reasons for skepticism — that was the challenge. Accuracy isn\'t enough if the framing creates distance.',
       },
     ],
     prev: 'microplastics',
@@ -583,19 +514,14 @@ const SCHOOL_STUDIES = {
       { type: 'placeholder', bg: '#EEF2F7', emoji: '🚀', caption: 'Ship it' },
     ],
     intro: 'My first shipped project. Built in a summer, with a team of scholars I\'d just met, using languages I\'d learned weeks before.',
-    stats: [
-      { num: '1',    label: 'Website shipped' },
-      { num: '3',    label: 'Languages learned' },
-      { num: '2021', label: 'Year everything started' },
-    ],
     sections: [
       {
-        label: 'The project',
+        label: 'The premise',
         heading: 'Build something that matters in the time you have.',
         body: 'We built a website on medical disparities — the documented gaps in healthcare access and outcomes across race, income, and geography — making that data legible to people who didn\'t already know the statistics.',
       },
       {
-        label: 'What I did',
+        label: 'What I built',
         heading: 'Learn fast. Build together. Ship.',
         body: 'I collaborated with fellow scholars, dividing responsibilities and integrating code under a tight deadline — all while actively learning the languages we were using.',
         callout: '"I didn\'t know what I was doing. That was the point."',
@@ -626,19 +552,14 @@ const SCHOOL_STUDIES = {
       { type: 'placeholder', bg: '#F7E1C3', emoji: '🚀', caption: 'Ship it' },
     ],
     intro: 'Year two. New language, new platform, same question: what do you build when you have a week and a cause you care about?',
-    stats: [
-      { num: '1',    label: 'Mobile app shipped' },
-      { num: 'Swift', label: 'Language learned' },
-      { num: 'Gen Z', label: 'Target audience' },
-    ],
     sections: [
       {
-        label: 'The project',
+        label: 'The premise',
         heading: 'Sustainability, but make it actually usable.',
         body: 'I built a final project targeting younger generations to be more sustainable. The design challenge was making it feel like something you\'d actually open, not install and forget.',
       },
       {
-        label: 'What I did',
+        label: 'What I built',
         heading: 'Learn Swift. Ship a product.',
         body: 'I learned Swift and mobile app development in compressed time, made product decisions about scope and features, and collaborated with scholars to ship a working app.',
         callout: '"The best sustainability app is one that doesn\'t feel like a sustainability app."',
@@ -669,19 +590,14 @@ const SCHOOL_STUDIES = {
       { type: 'placeholder', bg: '#E8EDE0', emoji: '🏛️', caption: 'The argument' },
     ],
     intro: 'Data doesn\'t change policy on its own. But a map that shows exactly where cyclists are getting hurt — that\'s harder to ignore.',
-    stats: [
-      { num: '1',    label: 'City analyzed' },
-      { num: 'Maps', label: 'Primary deliverable' },
-      { num: '↑',    label: 'Case for bike lane safety' },
-    ],
     sections: [
       {
-        label: 'The question',
+        label: 'The premise',
         heading: 'Where are cyclists getting hurt, and why?',
         body: 'I mapped Chicago bike accidents to build an evidence-based case to convince city authorities to implement safety measures in bicycle lanes.',
       },
       {
-        label: 'What I did',
+        label: 'What I built',
         heading: 'Turn accident data into a spatial argument.',
         body: 'I sourced and cleaned accident data, built visualizations that made geographic patterns legible, and framed the output as an argument — not just a data product.',
         callout: '"The point wasn\'t to show that accidents happen. The point was to show where, and why that\'s fixable."',
@@ -698,14 +614,6 @@ const SCHOOL_STUDIES = {
 }
 
 const ALL_STUDIES = { ...WORK_STUDIES, ...LEADERSHIP_STUDIES, ...SCHOOL_STUDIES }
-
-const BACK_LINKS = {
-  ...Object.fromEntries(Object.keys(WORK_STUDIES).map(k => [k, '/projects'])),
-  ...Object.fromEntries(Object.keys(LEADERSHIP_STUDIES).map(k => [k, '/projects'])),
-  ...Object.fromEntries(Object.keys(SCHOOL_STUDIES).map(k => [k, '/projects'])),
-}
-
-const STAT_COLORS = ['yellow', 'blue', 'peach']
 
 function SlideShow({ slides }) {
   const [current, setCurrent] = useState(0)
@@ -762,7 +670,6 @@ function SlideShow({ slides }) {
 export default function ProjectDetails() {
   const { id } = useParams()
   const p = ALL_STUDIES[id]
-  const backLink = BACK_LINKS[id] ?? '/projects'
 
   if (!p) return (
     <main style={{ padding: '8rem 2rem', textAlign: 'center' }}>
@@ -776,33 +683,32 @@ export default function ProjectDetails() {
       <SlideShow slides={p.slides} />
 
       <div className="detail-body">
+
+        {/* ── HEADER ── */}
         <p className="eyebrow" style={{ marginBottom: '0.4rem' }}>{p.tag}</p>
-        <h1 style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(1.8rem,4vw,2.8rem)', marginBottom: '2rem', lineHeight: 1.15 }}>
+        <h1 style={{
+          fontFamily: 'var(--font-serif)',
+          fontSize: 'clamp(1.8rem, 4vw, 2.8rem)',
+          marginBottom: '2rem',
+          lineHeight: 1.15,
+        }}>
           {p.title}
         </h1>
-      </div>
 
-      <div className="detail-meta">
-        {p.meta.map(m => (
-          <div key={m.label} className="detail-meta__item">
-            <div className="detail-meta__label">{m.label}</div>
-            <div className="detail-meta__value">{m.value}</div>
-          </div>
-        ))}
-      </div>
-
-      <div className="detail-body">
-        <p className="detail-intro">{p.intro}</p>
-
-        <div className="detail-stats">
-          {p.stats.map((stat, i) => (
-            <div key={stat.label} className={`detail-stat card--${STAT_COLORS[i % 3]}`}>
-              <span className="detail-stat__num">{stat.num}</span>
-              <span className="detail-stat__label">{stat.label}</span>
+        {/* ── META ── */}
+        <div className="detail-meta" style={{ marginLeft: 0, marginRight: 0 }}>
+          {p.meta.map(m => (
+            <div key={m.label} className="detail-meta__item">
+              <div className="detail-meta__label">{m.label}</div>
+              <div className="detail-meta__value">{m.value}</div>
             </div>
           ))}
         </div>
 
+        {/* ── INTRO ── */}
+        <p className="detail-intro" style={{ marginTop: '2rem' }}>{p.intro}</p>
+
+        {/* ── SECTIONS ── */}
         {p.sections.map(sec => (
           <div key={sec.label} className="detail-section">
             <p className="detail-section__label">{sec.label}</p>
@@ -812,21 +718,43 @@ export default function ProjectDetails() {
           </div>
         ))}
 
-        {p.links && (
-          <div style={{ display: 'flex', gap: '1rem', marginBottom: '2rem' }}>
+        {/* ── LINKS ── */}
+        {p.links && p.links.length > 0 && (
+          <div style={{
+            display: 'flex',
+            gap: '0.75rem',
+            flexWrap: 'wrap',
+            padding: '1.5rem 0',
+            borderTop: '1.5px solid var(--border)',
+            marginBottom: '2rem',
+          }}>
             {p.links.map(link => (
-              <a key={link.label} href={link.href} target="_blank" rel="noreferrer" className="btn btn--primary">
+              <a
+                key={link.label}
+                href={link.href}
+                target="_blank"
+                rel="noreferrer"
+                className="btn btn--primary"
+              >
                 {link.label}
               </a>
             ))}
           </div>
         )}
 
+        {/* ── PREV / NEXT ── */}
         <div className="detail-nav">
-          {p.prev ? <Link to={`/projects/${p.prev}`} className="link--accent">← previous</Link> : <span />}
-          <Link to={backLink} className="link--muted">all projects</Link>
-          {p.next ? <Link to={`/projects/${p.next}`} className="link--accent">next →</Link> : <span />}
+          {p.prev
+            ? <Link to={`/projects/${p.prev}`} className="link--accent">← previous</Link>
+            : <span />
+          }
+          <Link to="/projects" className="link--muted">all projects</Link>
+          {p.next
+            ? <Link to={`/projects/${p.next}`} className="link--accent">next →</Link>
+            : <span />
+          }
         </div>
+
       </div>
     </main>
   )
