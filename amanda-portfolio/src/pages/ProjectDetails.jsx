@@ -6,7 +6,7 @@ import { useParams, Link } from 'react-router-dom'
 // SLIDES: Replace placeholders with real images:
 //   { type: 'image', src: '/images/your-image.jpg', caption: 'Caption' }
 //   or keep placeholders until you have images:
-//   { type: 'placeholder', bg: '#EDF4FB', emoji: '⚙️', caption: 'Caption' }
+//   { type: 'placeholder', bg: '#FBEAC6', emoji: '⚙️', caption: 'Caption' }
 //
 // EMBED: Add an iframe embed (Google Slides, PDF, Figma) below all sections.
 //   embed: {
@@ -47,10 +47,10 @@ const WORK_STUDIES = {
       { label: 'Methods',  value: 'AI Strategy · Airtable · Front · Logistics' },
     ],
     slides: [
-      { type: 'placeholder', bg: '#E8EDE0', emoji: '⚙️', caption: 'The project' },
-      { type: 'placeholder', bg: '#EDF4FB', emoji: '🤖', caption: 'AI strategy' },
-      { type: 'placeholder', bg: '#F7E1C3', emoji: '📋', caption: 'Operations' },
-      { type: 'placeholder', bg: '#EEF2F7', emoji: '📈', caption: 'Impact' },
+      { type: 'placeholder', bg: '#F3ECDE', emoji: '⚙️', caption: 'The project' },
+      { type: 'placeholder', bg: '#FBEAC6', emoji: '🤖', caption: 'AI strategy' },
+      { type: 'placeholder', bg: '#F9F4EA', emoji: '📋', caption: 'Operations' },
+      { type: 'placeholder', bg: '#EEE8DC', emoji: '📈', caption: 'Impact' },
     ],
     intro: 'Nonprofits don\'t have the luxury of wasted effort. At Kode with Klossy, I\'ve been figuring out how AI tools can do more of the operational heavy lifting — so the humans can focus on the mission.',
     sections: [
@@ -87,10 +87,10 @@ const WORK_STUDIES = {
       { label: 'Methods',  value: 'Platform Evaluation · Executive Presentation · AI Strategy' },
     ],
     slides: [
-      { type: 'placeholder', bg: '#F7E1C3', emoji: '📈', caption: 'The project' },
-      { type: 'placeholder', bg: '#EDF4FB', emoji: '🔍', caption: 'Platform research' },
-      { type: 'placeholder', bg: '#EEF2F7', emoji: '💼', caption: 'Executive findings' },
-      { type: 'placeholder', bg: '#E8EDE0', emoji: '✅', caption: 'Outcomes' },
+      { type: 'placeholder', bg: '#F9F4EA', emoji: '📈', caption: 'The project' },
+      { type: 'placeholder', bg: '#FBEAC6', emoji: '🔍', caption: 'Platform research' },
+      { type: 'placeholder', bg: '#EEE8DC', emoji: '💼', caption: 'Executive findings' },
+      { type: 'placeholder', bg: '#F3ECDE', emoji: '✅', caption: 'Outcomes' },
     ],
     intro: 'A 78% cost reduction isn\'t found — it\'s built. At SACM, I ran the research, facilitated the demos, and presented the findings that made it visible.',
     sections: [
@@ -127,10 +127,10 @@ const WORK_STUDIES = {
       { label: 'Methods',  value: 'Grant Research · CRM · Adobe Illustrator · Multimedia' },
     ],
     slides: [
-      { type: 'placeholder', bg: '#F7E1C3', emoji: '🗳️', caption: 'Project overview' },
-      { type: 'placeholder', bg: '#EEF2F7', emoji: '🔍', caption: 'Research' },
-      { type: 'placeholder', bg: '#EDF4FB', emoji: '📋', caption: 'Deliverables' },
-      { type: 'placeholder', bg: '#E8EDE0', emoji: '✅', caption: 'Impact' },
+      { type: 'placeholder', bg: '#F9F4EA', emoji: '🗳️', caption: 'Project overview' },
+      { type: 'placeholder', bg: '#EEE8DC', emoji: '🔍', caption: 'Research' },
+      { type: 'placeholder', bg: '#FBEAC6', emoji: '📋', caption: 'Deliverables' },
+      { type: 'placeholder', bg: '#F3ECDE', emoji: '✅', caption: 'Impact' },
     ],
     intro: 'Civic engagement doesn\'t start with ballots — it starts with trust. At Dot Movement Digital, I worked on the infrastructure behind AAPI voter outreach.',
     sections: [
@@ -167,10 +167,10 @@ const WORK_STUDIES = {
       { label: 'Methods',  value: 'Product Management · Regulatory Research · Policy Analysis' },
     ],
     slides: [
-      { type: 'placeholder', bg: '#EEF2F7', emoji: '⚖️', caption: 'The project' },
-      { type: 'placeholder', bg: '#EDF4FB', emoji: '🔍', caption: 'HSR research' },
-      { type: 'placeholder', bg: '#F7E1C3', emoji: '💻', caption: 'EZ Merge app' },
-      { type: 'placeholder', bg: '#E8EDE0', emoji: '🏛️', caption: 'NY AG presentation' },
+      { type: 'placeholder', bg: '#EEE8DC', emoji: '⚖️', caption: 'The project' },
+      { type: 'placeholder', bg: '#FBEAC6', emoji: '🔍', caption: 'HSR research' },
+      { type: 'placeholder', bg: '#F9F4EA', emoji: '💻', caption: 'EZ Merge app' },
+      { type: 'placeholder', bg: '#F3ECDE', emoji: '🏛️', caption: 'NY AG presentation' },
     ],
     intro: 'The Hart-Scott-Rodino Act is calibrated for national markets. Local ones fall through the cracks. EZ Merge is our attempt to fix that.',
     sections: [
@@ -202,10 +202,10 @@ const WORK_STUDIES = {
       { label: 'Methods',  value: 'MATLAB · Neural Networks · Eye Gaze Datasets' },
     ],
     slides: [
-      { type: 'placeholder', bg: '#EDF4FB', emoji: '🧠', caption: 'The question' },
-      { type: 'placeholder', bg: '#EEF2F7', emoji: '👁️', caption: 'Eye gaze data' },
-      { type: 'placeholder', bg: '#F7E1C3', emoji: '⚙️', caption: 'Model building' },
-      { type: 'placeholder', bg: '#E8EDE0', emoji: '📊', caption: 'Results' },
+      { type: 'placeholder', bg: '#FBEAC6', emoji: '🧠', caption: 'The question' },
+      { type: 'placeholder', bg: '#EEE8DC', emoji: '👁️', caption: 'Eye gaze data' },
+      { type: 'placeholder', bg: '#F9F4EA', emoji: '⚙️', caption: 'Model building' },
+      { type: 'placeholder', bg: '#F3ECDE', emoji: '📊', caption: 'Results' },
     ],
     intro: 'Can where you look predict what you\'ll do next? In the Esfahani Lab, I used eye gaze data from ATARI gameplay to find out.',
     sections: [
@@ -242,10 +242,10 @@ const WORK_STUDIES = {
       { label: 'Methods',  value: 'Materials Research · Conference Presentation · International Exchange' },
     ],
     slides: [
-      { type: 'placeholder', bg: '#E8EDE0', emoji: '⚗️', caption: 'The research' },
-      { type: 'placeholder', bg: '#EDF4FB', emoji: '🌍', caption: 'Carbon capture context' },
-      { type: 'placeholder', bg: '#F7E1C3', emoji: '🇯🇵', caption: 'Sakura Science Japan' },
-      { type: 'placeholder', bg: '#EEF2F7', emoji: '📢', caption: 'Presentation' },
+      { type: 'placeholder', bg: '#F3ECDE', emoji: '⚗️', caption: 'The research' },
+      { type: 'placeholder', bg: '#FBEAC6', emoji: '🌍', caption: 'Carbon capture context' },
+      { type: 'placeholder', bg: '#F9F4EA', emoji: '🇯🇵', caption: 'Sakura Science Japan' },
+      { type: 'placeholder', bg: '#EEE8DC', emoji: '📢', caption: 'Presentation' },
     ],
     intro: 'Climate solutions live and die by material science. In the Lin Lab, I researched how sorbent modification could make carbon capture more effective — and took those findings to Japan.',
     sections: [
@@ -284,10 +284,10 @@ const LEADERSHIP_STUDIES = {
       { label: 'Methods',  value: 'Curriculum Design · Recruitment · Nonprofit Transition' },
     ],
     slides: [
-      { type: 'placeholder', bg: '#F7E1C3', emoji: '💻', caption: 'The bootcamp' },
-      { type: 'placeholder', bg: '#EDF4FB', emoji: '🌍', caption: 'Global reach' },
-      { type: 'placeholder', bg: '#EEF2F7', emoji: '📚', caption: 'Curriculum' },
-      { type: 'placeholder', bg: '#E8EDE0', emoji: '🏛️', caption: '501(c)(3) transition' },
+      { type: 'placeholder', bg: '#F9F4EA', emoji: '💻', caption: 'The bootcamp' },
+      { type: 'placeholder', bg: '#FBEAC6', emoji: '🌍', caption: 'Global reach' },
+      { type: 'placeholder', bg: '#EEE8DC', emoji: '📚', caption: 'Curriculum' },
+      { type: 'placeholder', bg: '#F3ECDE', emoji: '🏛️', caption: '501(c)(3) transition' },
     ],
     intro: 'There was no Y/CS winter bootcamp before we built it. Starting from zero, we recruited from 600+ schools across 20 countries and turned a one-time idea into a nonprofit.',
     sections: [
@@ -324,10 +324,10 @@ const LEADERSHIP_STUDIES = {
       { label: 'Methods',  value: 'Product Launch · Campus Marketing · Growth' },
     ],
     slides: [
-      { type: 'placeholder', bg: '#EEF2F7', emoji: '🚀', caption: 'Launch' },
-      { type: 'placeholder', bg: '#EDF4FB', emoji: '💻', caption: 'The apps' },
-      { type: 'placeholder', bg: '#F7E1C3', emoji: '📣', caption: 'Campus campaigns' },
-      { type: 'placeholder', bg: '#E8EDE0', emoji: '📈', caption: '600+ users' },
+      { type: 'placeholder', bg: '#EEE8DC', emoji: '🚀', caption: 'Launch' },
+      { type: 'placeholder', bg: '#FBEAC6', emoji: '💻', caption: 'The apps' },
+      { type: 'placeholder', bg: '#F9F4EA', emoji: '📣', caption: 'Campus campaigns' },
+      { type: 'placeholder', bg: '#F3ECDE', emoji: '📈', caption: '600+ users' },
     ],
     intro: 'Building the app is one thing. Getting 600+ people to use it in the first week is another. That\'s a distribution problem — and it\'s the one I was responsible for.',
     sections: [
@@ -364,10 +364,10 @@ const LEADERSHIP_STUDIES = {
       { label: 'Methods',  value: 'Budget Management · Editorial · Event Production · Board Leadership' },
     ],
     slides: [
-      { type: 'placeholder', bg: '#EEF2F7', emoji: '🏮', caption: 'The org' },
-      { type: 'placeholder', bg: '#EDF4FB', emoji: '📰', caption: 'Newsletter' },
-      { type: 'placeholder', bg: '#F7E1C3', emoji: '💰', caption: 'Budget & events' },
-      { type: 'placeholder', bg: '#E8EDE0', emoji: '📊', caption: 'Impact' },
+      { type: 'placeholder', bg: '#EEE8DC', emoji: '🏮', caption: 'The org' },
+      { type: 'placeholder', bg: '#FBEAC6', emoji: '📰', caption: 'Newsletter' },
+      { type: 'placeholder', bg: '#F9F4EA', emoji: '💰', caption: 'Budget & events' },
+      { type: 'placeholder', bg: '#F3ECDE', emoji: '📊', caption: 'Impact' },
     ],
     intro: 'CASA isn\'t just a student org — it\'s community infrastructure for Asian American students at Yale. As VP, I\'ve been responsible for a lot of what keeps it running.',
     sections: [
@@ -406,10 +406,10 @@ const SCHOOL_STUDIES = {
       { label: 'Methods',  value: 'ML · NLP · GloVe' },
     ],
     slides: [
-      { type: 'placeholder', bg: '#EDF4FB', emoji: '✏️', caption: 'The Minute Cryptic Decrypted' },
-      { type: 'placeholder', bg: '#EEF2F7', emoji: '🧠', caption: 'Classification pipeline' },
-      { type: 'placeholder', bg: '#E8EFF8', emoji: '📊', caption: '69% classification accuracy' },
-      { type: 'placeholder', bg: '#F0F4FA', emoji: '🔤', caption: 'GloVe semantic ranking' },
+      { type: 'placeholder', bg: '#FBEAC6', emoji: '✏️', caption: 'The Minute Cryptic Decrypted' },
+      { type: 'placeholder', bg: '#EEE8DC', emoji: '🧠', caption: 'Classification pipeline' },
+      { type: 'placeholder', bg: '#FBEAC6', emoji: '📊', caption: '69% classification accuracy' },
+      { type: 'placeholder', bg: '#F9F4EA', emoji: '🔤', caption: 'GloVe semantic ranking' },
     ],
     intro: 'Mini cryptic crosswords are one of my favorite things — so naturally I tried to build a machine that could solve them.',
     sections: [
@@ -445,10 +445,10 @@ const SCHOOL_STUDIES = {
       { label: 'Methods',  value: 'Cell Line Experiments · Statistical Analysis · Symposium Presentation' },
     ],
     slides: [
-      { type: 'placeholder', bg: '#EDF4FB', emoji: '🔬', caption: 'Research question' },
-      { type: 'placeholder', bg: '#EEF2F7', emoji: '🧬', caption: 'Experiments' },
-      { type: 'placeholder', bg: '#F7E1C3', emoji: '🗂️', caption: 'Analysis' },
-      { type: 'placeholder', bg: '#E8EDE0', emoji: '💡', caption: 'Findings' },
+      { type: 'placeholder', bg: '#FBEAC6', emoji: '🔬', caption: 'Research question' },
+      { type: 'placeholder', bg: '#EEE8DC', emoji: '🧬', caption: 'Experiments' },
+      { type: 'placeholder', bg: '#F9F4EA', emoji: '🗂️', caption: 'Analysis' },
+      { type: 'placeholder', bg: '#F3ECDE', emoji: '💡', caption: 'Findings' },
     ],
     intro: 'Triple-negative breast cancer is one of the hardest to treat — and one of the least understood. This summer, I tried to understand one small piece of why it spreads.',
     sections: [
@@ -486,10 +486,10 @@ const SCHOOL_STUDIES = {
       { label: 'Methods',  value: 'Experimental Design · Ionization · Poster & Presentation' },
     ],
     slides: [
-      { type: 'placeholder', bg: '#F7E1C3', emoji: '🧪', caption: 'The experiment' },
-      { type: 'placeholder', bg: '#EDF4FB', emoji: '💧', caption: 'Water treatment' },
-      { type: 'placeholder', bg: '#E8EDE0', emoji: '🏆', caption: 'Awards' },
-      { type: 'placeholder', bg: '#EEF2F7', emoji: '📢', caption: 'Presentation' },
+      { type: 'placeholder', bg: '#F9F4EA', emoji: '🧪', caption: 'The experiment' },
+      { type: 'placeholder', bg: '#FBEAC6', emoji: '💧', caption: 'Water treatment' },
+      { type: 'placeholder', bg: '#F3ECDE', emoji: '🏆', caption: 'Awards' },
+      { type: 'placeholder', bg: '#EEE8DC', emoji: '📢', caption: 'Presentation' },
     ],
     intro: 'Microplastics are everywhere — including water we treat and release. I built an ionization-based approach to filter them out more efficiently.',
     sections: [
@@ -526,10 +526,10 @@ const SCHOOL_STUDIES = {
       { label: 'Methods',  value: 'Web Development · Health Communication · Capstone' },
     ],
     slides: [
-      { type: 'placeholder', bg: '#E8EDE0', emoji: '🌐', caption: 'The website' },
-      { type: 'placeholder', bg: '#EDF4FB', emoji: '🦠', caption: 'COVID context' },
-      { type: 'placeholder', bg: '#F7E1C3', emoji: '🤝', caption: 'Community focus' },
-      { type: 'placeholder', bg: '#EEF2F7', emoji: '💉', caption: 'Vaccine equity' },
+      { type: 'placeholder', bg: '#F3ECDE', emoji: '🌐', caption: 'The website' },
+      { type: 'placeholder', bg: '#FBEAC6', emoji: '🦠', caption: 'COVID context' },
+      { type: 'placeholder', bg: '#F9F4EA', emoji: '🤝', caption: 'Community focus' },
+      { type: 'placeholder', bg: '#EEE8DC', emoji: '💉', caption: 'Vaccine equity' },
     ],
     intro: 'Vaccine hesitancy is a response to a system that hasn\'t always been trustworthy. This capstone project tried to meet communities where they actually were.',
     sections: [
@@ -566,10 +566,10 @@ const SCHOOL_STUDIES = {
       { label: 'Methods',  value: 'HTML · CSS · JavaScript · Collaborative Build' },
     ],
     slides: [
-      { type: 'placeholder', bg: '#F7E1C3', emoji: '🩺', caption: 'The project' },
-      { type: 'placeholder', bg: '#E8EDE0', emoji: '💻', caption: 'Building it' },
-      { type: 'placeholder', bg: '#EDF4FB', emoji: '🤝', caption: 'Collaboration' },
-      { type: 'placeholder', bg: '#EEF2F7', emoji: '🚀', caption: 'Ship it' },
+      { type: 'placeholder', bg: '#F9F4EA', emoji: '🩺', caption: 'The project' },
+      { type: 'placeholder', bg: '#F3ECDE', emoji: '💻', caption: 'Building it' },
+      { type: 'placeholder', bg: '#FBEAC6', emoji: '🤝', caption: 'Collaboration' },
+      { type: 'placeholder', bg: '#EEE8DC', emoji: '🚀', caption: 'Ship it' },
     ],
     intro: 'My first shipped project. Built in a summer, with a team of scholars I\'d just met, using languages I\'d learned weeks before.',
     sections: [
@@ -605,10 +605,10 @@ const SCHOOL_STUDIES = {
       { label: 'Methods',  value: 'Swift · Mobile App Development · User Research' },
     ],
     slides: [
-      { type: 'placeholder', bg: '#E8EDE0', emoji: '🌱', caption: 'The app' },
-      { type: 'placeholder', bg: '#EDF4FB', emoji: '📱', caption: 'Mobile development' },
-      { type: 'placeholder', bg: '#EEF2F7', emoji: '♻️', caption: 'Sustainability focus' },
-      { type: 'placeholder', bg: '#F7E1C3', emoji: '🚀', caption: 'Ship it' },
+      { type: 'placeholder', bg: '#F3ECDE', emoji: '🌱', caption: 'The app' },
+      { type: 'placeholder', bg: '#FBEAC6', emoji: '📱', caption: 'Mobile development' },
+      { type: 'placeholder', bg: '#EEE8DC', emoji: '♻️', caption: 'Sustainability focus' },
+      { type: 'placeholder', bg: '#F9F4EA', emoji: '🚀', caption: 'Ship it' },
     ],
     intro: 'Year two. New language, new platform, same question: what do you build when you have a week and a cause you care about?',
     sections: [
@@ -644,10 +644,10 @@ const SCHOOL_STUDIES = {
       { label: 'Methods',  value: 'Data Analysis · Mapping · Civic Advocacy' },
     ],
     slides: [
-      { type: 'placeholder', bg: '#EDF4FB', emoji: '🚲', caption: 'The project' },
-      { type: 'placeholder', bg: '#F7E1C3', emoji: '🗺️', caption: 'The maps' },
-      { type: 'placeholder', bg: '#EEF2F7', emoji: '📊', caption: 'The data' },
-      { type: 'placeholder', bg: '#E8EDE0', emoji: '🏛️', caption: 'The argument' },
+      { type: 'placeholder', bg: '#FBEAC6', emoji: '🚲', caption: 'The project' },
+      { type: 'placeholder', bg: '#F9F4EA', emoji: '🗺️', caption: 'The maps' },
+      { type: 'placeholder', bg: '#EEE8DC', emoji: '📊', caption: 'The data' },
+      { type: 'placeholder', bg: '#F3ECDE', emoji: '🏛️', caption: 'The argument' },
     ],
     intro: 'Data doesn\'t change policy on its own. But a map that shows exactly where cyclists are getting hurt — that\'s harder to ignore.',
     sections: [
