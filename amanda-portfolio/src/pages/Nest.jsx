@@ -131,71 +131,22 @@ function RipplePond() {
   )
 }
 
-// ── LIVE WEATHER (Open-Meteo, no API key) ───────────────────────────────────
+// ── LIVE CLOCK — Niagara Falls, New York (Eastern time) ─────────────────────
 
-const WEATHER = {
-  clear:  { emoji: '☀️',  text: 'clear skies' },
-  mostly: { emoji: '🌤️', text: 'mostly sunny' },
-  cloud:  { emoji: '⛅',  text: 'partly cloudy' },
-  overcast:{ emoji: '☁️', text: 'overcast' },
-  fog:    { emoji: '🌫️', text: 'foggy' },
-  drizzle:{ emoji: '🌦️', text: 'drizzly' },
-  rain:   { emoji: '🌧️', text: 'rainy' },
-  snow:   { emoji: '❄️',  text: 'snowy' },
-  storm:  { emoji: '⛈️',  text: 'stormy' },
-}
-function codeToWeather(code) {
-  if (code === 0) return WEATHER.clear
-  if (code === 1) return WEATHER.mostly
-  if (code === 2) return WEATHER.cloud
-  if (code === 3) return WEATHER.overcast
-  if (code === 45 || code === 48) return WEATHER.fog
-  if (code >= 51 && code <= 57) return WEATHER.drizzle
-  if ((code >= 61 && code <= 67) || (code >= 80 && code <= 82)) return WEATHER.rain
-  if ((code >= 71 && code <= 77) || (code >= 85 && code <= 86)) return WEATHER.snow
-  if (code >= 95) return WEATHER.storm
-  return WEATHER.cloud
-}
-
-function WeatherCard() {
-  const [state, setState] = useState({ status: 'loading' })
-
+function NiagaraClock() {
+  const [now, setNow] = useState(() => new Date())
   useEffect(() => {
-    let cancelled = false
-    // New Haven, CT — swap the coords for your city
-    const url = 'https://api.open-meteo.com/v1/forecast?latitude=41.31&longitude=-72.92&current=temperature_2m,weather_code&temperature_unit=fahrenheit'
-    fetch(url)
-      .then(r => r.json())
-      .then(data => {
-        if (cancelled) return
-        const cur = data.current
-        setState({
-          status: 'ok',
-          temp: Math.round(cur.temperature_2m),
-          ...codeToWeather(cur.weather_code),
-        })
-      })
-      .catch(() => { if (!cancelled) setState({ status: 'error' }) })
-    return () => { cancelled = true }
+    const id = setInterval(() => setNow(new Date()), 1000)
+    return () => clearInterval(id)
   }, [])
-
+  const time = now.toLocaleTimeString('en-US', {
+    timeZone: 'America/New_York',
+    hour: 'numeric', minute: '2-digit', second: '2-digit', hour12: true,
+  })
   return (
-    <div className="widget widget--weather">
-      <p className="widget__label">right now in New Haven</p>
-      {state.status === 'loading' && <p className="widget__big">· · ·</p>}
-      {state.status === 'error' && (
-        <>
-          <p className="widget__emoji">🌡️</p>
-          <p className="widget__sub">weather's being shy — check back in a sec</p>
-        </>
-      )}
-      {state.status === 'ok' && (
-        <>
-          <p className="widget__emoji">{state.emoji}</p>
-          <p className="widget__big">{state.temp}°F</p>
-          <p className="widget__sub">{state.text}</p>
-        </>
-      )}
+    <div className="niagara-clock">
+      <div className="niagara-clock__time">{time}</div>
+      <div className="niagara-clock__place">🌊 right now in Niagara Falls, New York</div>
     </div>
   )
 }
@@ -257,14 +208,15 @@ export default function Nest() {
         <h1 className="title-xl">the nest ✶</h1>
         <p className="subtitle" style={{ maxWidth: 520 }}>
           A little corner of the internet that's just for fun — what I'm watching,
-          listening to, and the weather over my desk. Poke around.
+          listening to, and the time ticking away in Niagara Falls. Poke around.
         </p>
       </header>
+
+      <NiagaraClock />
 
       <RipplePond />
 
       <div className="nest-widgets">
-        <WeatherCard />
 
         {/* Currently */}
         <div className="widget widget--currently">

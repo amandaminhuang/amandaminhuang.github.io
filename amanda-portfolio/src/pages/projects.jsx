@@ -115,22 +115,35 @@ const VOLUNTEER = [
   { name: 'HARVEST - Yale Sustainable Food Program', role: 'Freshman Orientation Leader', emoji: '👩🏻‍🌾' }
 ]
 
+// Each tile shows the name; on hover it fills with this color.
+const TILE_COLORS = {
+  sacm:            '#E88C30',
+  civic:           '#3E7CB1',
+  thurman:         '#7A5FA3',
+  'ub-carbon':     '#5A9E6F',
+  roswell:         '#C4577A',
+  microplastics:   '#4FA3A5',
+  cryptic:         '#D99A2B',
+  'covid-website': '#D06A54',
+}
+
 function ProjectTile({ project }) {
+  const color = TILE_COLORS[project.id] || '#2D2F3D'
   return (
-    <Link to={`/projects/${project.id}`} className="project-tile">
+    <Link to={`/projects/${project.id}`} className="project-tile" style={{ '--tile-color': color }}>
       {project.src
         ? <img src={project.src} alt={project.title} className="project-tile__image" />
         : (
-          <div className="project-tile__placeholder">
-            <span className="project-tile__placeholder-emoji">{project.emoji}</span>
-            <span className="project-tile__placeholder-label">{project.tag}</span>
+          <div className="project-tile__face">
+            <span className="project-tile__emoji">{project.emoji}</span>
+            <span className="project-tile__name">{project.title}</span>
           </div>
         )
       }
       <div className="project-tile__overlay">
         <p className="project-tile__overlay-tag">{project.tag}</p>
         <h2 className="project-tile__overlay-title">{project.title}</h2>
-        <div className="project-tile__overlay-cta">click to view more ✦</div>
+        <span className="project-tile__overlay-cta">view case →</span>
       </div>
     </Link>
   )
