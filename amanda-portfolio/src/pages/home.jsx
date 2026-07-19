@@ -59,11 +59,13 @@ export default function Home() {
             <img src="/amanda.png" alt="Amanda" />
           </h1>
           <p className="landing-hero__intro">
-            First-gen Yale student turning messy problems into clear plans. I care about
-            strategy, operations, and product — and the people they're actually for.
+          First-gen Yale student passionate about understanding how people interact with technology
+          and building solutions to make our world more accessible.
+
           </p>
           <div className="landing-hero__ctas">
-            <a href="#work" className="pill-btn">see my work <span>↓</span></a>
+            <Link to="/about" className="pill-btn">read my story <span>→</span></Link>
+            <a href="#work" className="pill-btn pill-btn--ghost">see my work <span>↓</span></a>
           </div>
         </div>
         <a href="#work" className="landing-scroll" aria-label="Scroll to work">↓</a>
