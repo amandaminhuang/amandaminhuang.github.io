@@ -63,8 +63,7 @@ export default function Home() {
             strategy, operations, and product — and the people they're actually for.
           </p>
           <div className="landing-hero__ctas">
-            <Link to="/about" className="pill-btn">read my story <span>→</span></Link>
-            <a href="#work" className="pill-btn pill-btn--ghost">see my work <span>↓</span></a>
+            <a href="#work" className="pill-btn">see my work <span>↓</span></a>
           </div>
         </div>
         <a href="#work" className="landing-scroll" aria-label="Scroll to work">↓</a>
