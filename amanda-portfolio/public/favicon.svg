@@ -1,14 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
-  <path d="M32 32 L32 2 L40.82 19.86 Z"        fill="#F8C765"/>
-  <path d="M32 32 L40.82 19.86 L60.53 22.73 Z" fill="#E39E1E"/>
-  <path d="M32 32 L60.53 22.73 L46.27 36.64 Z" fill="#F8C765"/>
-  <path d="M32 32 L46.27 36.64 L49.63 56.27 Z" fill="#E39E1E"/>
-  <path d="M32 32 L49.63 56.27 L32 47 Z"        fill="#F8C765"/>
-  <path d="M32 32 L32 47 L14.37 56.27 Z"        fill="#E39E1E"/>
-  <path d="M32 32 L14.37 56.27 L17.73 36.64 Z"  fill="#F8C765"/>
-  <path d="M32 32 L17.73 36.64 L3.47 22.73 Z"   fill="#E39E1E"/>
-  <path d="M32 32 L3.47 22.73 L23.18 19.86 Z"   fill="#F8C765"/>
-  <path d="M32 32 L23.18 19.86 L32 2 Z"         fill="#E39E1E"/>
+  <path d="M32 32 L32 2 L40.82 19.86 Z"        fill="#F6B9CD"/>
+  <path d="M32 32 L40.82 19.86 L60.53 22.73 Z" fill="#E07C9E"/>
+  <path d="M32 32 L60.53 22.73 L46.27 36.64 Z" fill="#F6B9CD"/>
+  <path d="M32 32 L46.27 36.64 L49.63 56.27 Z" fill="#E07C9E"/>
+  <path d="M32 32 L49.63 56.27 L32 47 Z"        fill="#F6B9CD"/>
+  <path d="M32 32 L32 47 L14.37 56.27 Z"        fill="#E07C9E"/>
+  <path d="M32 32 L14.37 56.27 L17.73 36.64 Z"  fill="#F6B9CD"/>
+  <path d="M32 32 L17.73 36.64 L3.47 22.73 Z"   fill="#E07C9E"/>
+  <path d="M32 32 L3.47 22.73 L23.18 19.86 Z"   fill="#F6B9CD"/>
+  <path d="M32 32 L23.18 19.86 L32 2 Z"         fill="#E07C9E"/>
   <path d="M32 2 L40.82 19.86 L60.53 22.73 L46.27 36.64 L49.63 56.27 L32 47 L14.37 56.27 L17.73 36.64 L3.47 22.73 L23.18 19.86 Z"
-        fill="none" stroke="#B5791A" stroke-width="1.4" stroke-linejoin="round"/>
+        fill="none" stroke="#C85F82" stroke-width="1.4" stroke-linejoin="round"/>
 </svg>

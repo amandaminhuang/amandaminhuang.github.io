@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react'
-import PaperStar from './PaperStar'
 
 // A little paper lucky star tucked in the corner. Click it and it "unfolds"
 // into a hidden note with ways to get in touch — a friendly easter egg.
@@ -21,13 +20,13 @@ export default function LuckyStar() {
         aria-label="Open the lucky star — ways to reach me"
         title="psst… open me ✶"
       >
-        <PaperStar size={40} />
+        <img src="/stars/rose.png" alt="" width={46} />
       </button>
 
       {open && (
         <div className="starnote" onClick={() => setOpen(false)}>
           <div className="starnote__card" onClick={e => e.stopPropagation()}>
-            <div className="starnote__star"><PaperStar size={56} /></div>
+            <div className="starnote__star"><img src="/stars/rose.png" alt="" width={64} /></div>
             <p className="starnote__eyebrow">✶ you found the lucky star ✶</p>
             <p className="starnote__msg">Let's connect — here's how to reach me:</p>
 

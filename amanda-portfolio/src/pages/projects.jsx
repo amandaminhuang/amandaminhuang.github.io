@@ -162,8 +162,9 @@ export default function Projects() {
   return (
     <main className="projects-page">
       <PageStars stars={[
-        { color: 'lilac',    size: 30, top: '8%',  right: '3%', dur: '6.5s', spin: '14s' },
-        { color: 'marigold', size: 22, top: '58%', left: '2%', dur: '7.5s', spin: '12s', delay: '1.4s' },
+        { name: 'cream', size: 48, top: '7%',  right: '3%', dur: '6.5s', spin: '14s' },
+        { name: 'plaid', size: 40, top: '52%', left: '2%',  dur: '7.5s', spin: '12s', delay: '1.4s' },
+        { name: 'teal',  size: 34, top: '84%', right: '6%', dur: '6.4s', spin: '13s', delay: '0.7s' },
       ]} />
 
       <div>

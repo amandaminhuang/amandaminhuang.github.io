@@ -2,39 +2,39 @@
 
 /* ── TOKENS ── */
 :root {
-  /* ── core palette : cream + charcoal + marigold (Cassie Myers hybrid) ── */
-  --cream-bg:  #F4EFE6;  /* warm cream background */
-  --paper:     #F9F4EA;  /* lighter paper for cards */
+  /* ── core palette : frosted cream + charcoal + soft pink ── */
+  --cream-bg:  #F6F1EF;  /* frosty cream background */
+  --paper:     #FBF6F5;  /* lighter pink-white for cards */
   --ink:       #2D2F3D;  /* charcoal-navy — text & dark surfaces */
-  --marigold:  #F2AF36;  /* the single accent pop */
-  --marigold-d:#E09E1E;  /* deeper marigold for hover */
-  --marigold-t:#FBEAC6;  /* soft marigold tint */
-  --gold-ink:  #C08A14;  /* deep readable amber for small accent text */
+  --marigold:  #E890AB;  /* the accent pop → soft rose */
+  --marigold-d:#D06D8D;  /* deeper rose for hover */
+  --marigold-t:#FCE4EC;  /* soft blush tint */
+  --gold-ink:  #BF6383;  /* deep readable rose for small accent text */
 
   /* ── semantic (legacy names kept so existing classes map cleanly) ── */
   --navy:      #2D2F3D;  /* primary dark → charcoal-navy */
-  --blue:      #C08A14;  /* accent text → deep amber */
-  --sky:       #FBEAC6;  /* soft tint bg → marigold tint */
-  --wheat:     #EEE8DC;  /* neutral */
-  --cream:     #F9F4EA;  /* paper */
+  --blue:      #BF6383;  /* accent text → deep rose */
+  --sky:       #FCE4EC;  /* soft tint bg → blush */
+  --wheat:     #ECE6E7;  /* cool neutral */
+  --cream:     #FBF6F5;  /* paper */
 
-  --bg:        #F4EFE6;  /* warm cream */
-  --surface:   #EEE8DC;  /* soft neutral card surface */
-  --border:    #E4DBCB;  /* gentle neutral border */
+  --bg:        #F6F1EF;  /* frosty cream */
+  --surface:   #EFE9EA;  /* soft neutral card surface */
+  --border:    #E8DEE0;  /* gentle pink-gray border */
   --text:      #2D2F3D;  /* charcoal-navy */
-  --muted:     #7C7D86;  /* muted slate */
+  --muted:     #8B8890;  /* cool muted slate */
 
-  --card-1:    #F9F4EA;  /* paper */
-  --card-2:    #FBEAC6;  /* marigold tint */
-  --card-3:    #EEE8DC;  /* neutral */
-  --card-4:    #F3ECDE;  /* warm neutral */
+  --card-1:    #FBF6F5;  /* paper */
+  --card-2:    #FCE4EC;  /* blush tint */
+  --card-3:    #EFE9EA;  /* neutral */
+  --card-4:    #F4ECEE;  /* soft neutral */
 
-  --shadow:    45, 47, 61;  /* charcoal shadow rgb, use as rgba(var(--shadow), a) */
+  --shadow:    60, 52, 62;  /* soft mauve shadow rgb, use as rgba(var(--shadow), a) */
 
   /* ── legacy aliases (kept for older inline refs) ── */
-  --almond:    #FBEAC6;
-  --bronze:    #F2AF36;
-  --olive:     #C08A14;
+  --almond:    #FCE4EC;
+  --bronze:    #E890AB;
+  --olive:     #BF6383;
   --jet:       #2D2F3D;
   --mahogany:  #2D2F3D;
 
@@ -50,7 +50,7 @@
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body {
-  background: linear-gradient(158deg, #F8F4ED 0%, #F5F2EB 55%, #F1EFF3 100%);
+  background: linear-gradient(158deg, #FBF5F3 0%, #F7F0F1 52%, #F0EFF6 100%);
   background-attachment: fixed;
   color: var(--text);
   font-family: var(--font-sans);
@@ -1128,10 +1128,10 @@ body::before {
   z-index: -1;
   pointer-events: none;
   background:
-    radial-gradient(34% 34% at 12% 14%, rgba(242,175,54,0.22), transparent 70%),
-    radial-gradient(40% 40% at 88% 8%, rgba(247,196,110,0.20), transparent 70%),
-    radial-gradient(44% 44% at 84% 86%, rgba(240,160,120,0.16), transparent 70%),
-    radial-gradient(42% 42% at 6% 92%, rgba(168,180,222,0.20), transparent 70%);
+    radial-gradient(34% 34% at 12% 14%, rgba(232,144,171,0.20), transparent 70%),
+    radial-gradient(40% 40% at 88% 8%, rgba(250,210,225,0.24), transparent 70%),
+    radial-gradient(44% 44% at 84% 86%, rgba(255,255,255,0.32), transparent 70%),
+    radial-gradient(42% 42% at 6% 92%, rgba(190,205,235,0.22), transparent 70%);
   filter: blur(36px);
   animation: bgdrift 30s ease-in-out infinite alternate;
 }
@@ -1363,7 +1363,7 @@ body::before {
 .pillnav__link--active::before {
   content: '';
   width: 7px; height: 7px; border-radius: 50%;
-  background: var(--marigold);
+  background: #F2AF36;
   flex-shrink: 0;
 }
 .pillnav button.pillnav__link {
@@ -1578,6 +1578,35 @@ body::before {
 .wx-card__temp { font-family: var(--font-serif); font-size: 1.9rem; font-weight: 700; line-height: 1; }
 .wx-card__place { font-size: 0.85rem; color: var(--muted); }
 
+/* revolving photo widget */
+.revolve { padding: 1.15rem; }
+.revolve__stage {
+  position: relative; margin-top: 0.6rem;
+  aspect-ratio: 4 / 3; border-radius: 8px; overflow: hidden;
+  perspective: 900px; background: var(--marigold-t);
+}
+.revolve__placeholder {
+  position: absolute; inset: 0;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 0.4rem; text-align: center; padding: 1rem;
+  color: var(--muted); font-size: 0.82rem; line-height: 1.4;
+}
+.revolve__img {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: cover;
+  opacity: 0; transform: rotateY(75deg);
+  transition: opacity 0.7s ease, transform 0.85s cubic-bezier(.3, .7, .2, 1);
+  backface-visibility: hidden;
+}
+.revolve__img.is-active { opacity: 1; transform: rotateY(0deg); }
+@media (prefers-reduced-motion: reduce) {
+  .revolve__img { transition: opacity 0.4s ease; transform: none; }
+}
+
+/* lucky-star + note now use real paper-star photos */
+.lucky-star img { display: block; filter: drop-shadow(0 4px 9px rgba(var(--shadow), 0.22)); }
+.starnote__star img { display: block; }
+
 /* ── PAGE STARS (pinned to the page; bob + occasional spin) ── */
 .landing, .about-layout, .projects-page, .nest-page { position: relative; isolation: isolate; }
 .page-star {
@@ -1635,8 +1664,8 @@ body::before {
   font-weight: 800; letter-spacing: -0.03em; line-height: 0.95; margin-bottom: 1.25rem;
   /* warm marigold "glass" — a bright sheen sweeps across once on load */
   background:
-    linear-gradient(100deg, transparent 42%, rgba(255, 251, 235, 0.92) 50%, transparent 58%),
-    linear-gradient(180deg, #F6BC44 0%, #E0A222 52%, #B67E14 100%);
+    linear-gradient(100deg, transparent 42%, rgba(255, 255, 255, 0.95) 50%, transparent 58%),
+    linear-gradient(180deg, #F3A6C0 0%, #E381A2 52%, #C85F82 100%);
   background-size: 250% 100%, 100% 100%;
   background-position: 220% 0, 0 0;
   background-repeat: no-repeat;
@@ -1649,6 +1678,20 @@ body::before {
   from { background-position: 220% 0, 0 0; }
   to   { background-position: -70% 0, 0 0; }
 }
+/* image version of the hero name (amanda.png) */
+.landing-hero__name--img {
+  background: none;
+  -webkit-text-fill-color: currentColor; color: inherit;
+  animation: none; filter: none;
+  line-height: 0;
+}
+.landing-hero__name--img img {
+  display: block; margin: 0 auto;
+  width: min(520px, 84vw); height: auto;
+  filter: drop-shadow(0 10px 22px rgba(var(--shadow), 0.20));
+}
+/* soft shadow so the paper-star photos sit on the page */
+.page-star img { filter: drop-shadow(0 5px 10px rgba(var(--shadow), 0.20)); }
 .landing-hero__intro {
   max-width: 540px; font-size: clamp(1rem, 2.2vw, 1.2rem);
   line-height: 1.6; color: var(--text); margin-bottom: 2rem;

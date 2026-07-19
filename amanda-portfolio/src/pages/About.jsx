@@ -19,34 +19,32 @@ function PhotoWidget() {
   )
 }
 
-// ── LIVE WEATHER (Open-Meteo, no key) — New Haven, CT ────────────────────────
-function weatherEmoji(code) {
-  if (code === 0) return ['☀️', 'clear']
-  if (code <= 2) return ['🌤️', 'sunny']
-  if (code === 3) return ['☁️', 'cloudy']
-  if (code <= 48) return ['🌫️', 'foggy']
-  if (code <= 57) return ['🌦️', 'drizzly']
-  if (code <= 67 || (code >= 80 && code <= 82)) return ['🌧️', 'rainy']
-  if (code <= 86) return ['❄️', 'snowy']
-  return ['⛈️', 'stormy']
-}
-function WeatherCard() {
-  const [w, setW] = useState(null)
+// ── REVOLVING PHOTO WIDGET (auto-cycles through public/photos/1.jpg … ) ──────
+const REVOLVE_PHOTOS = [1, 2, 3, 4]
+function RevolvingPhotos() {
+  const [idx, setIdx] = useState(0)
+  const [dead, setDead] = useState({})
   useEffect(() => {
-    let cancel = false
-    fetch('https://api.open-meteo.com/v1/forecast?latitude=41.31&longitude=-72.92&current=temperature_2m,weather_code&temperature_unit=fahrenheit')
-      .then(r => r.json())
-      .then(d => { if (!cancel) setW(d.current) })
-      .catch(() => {})
-    return () => { cancel = true }
+    const t = setInterval(() => setIdx(i => (i + 1) % REVOLVE_PHOTOS.length), 3200)
+    return () => clearInterval(t)
   }, [])
-  const [emoji, text] = w ? weatherEmoji(w.weather_code) : ['🌡️', '…']
   return (
-    <div className="widget-card wx-card">
-      <span className="wx-card__emoji">{emoji}</span>
-      <div>
-        <div className="wx-card__temp">{w ? `${Math.round(w.temperature_2m)}°F` : '· ·'}</div>
-        <div className="wx-card__place">{text} in New Haven, CT</div>
+    <div className="widget-card revolve">
+      <p className="widget-label">📸 moments</p>
+      <div className="revolve__stage">
+        <div className="revolve__placeholder">
+          <span style={{ fontSize: '1.8rem' }}>📷</span>
+          <span>add photos at <code>public/photos/1.jpg</code> …</span>
+        </div>
+        {REVOLVE_PHOTOS.map((n, i) => !dead[n] && (
+          <img
+            key={n}
+            src={`/photos/${n}.jpg`}
+            alt=""
+            className={`revolve__img ${i === idx ? 'is-active' : ''}`}
+            onError={() => setDead(d => ({ ...d, [n]: true }))}
+          />
+        ))}
       </div>
     </div>
   )
@@ -56,8 +54,9 @@ export default function About() {
   return (
     <main className="about-layout">
       <PageStars stars={[
-        { color: 'coral', size: 30, top: '10%', right: '2%', dur: '6.5s', spin: '14s' },
-        { color: 'green', size: 22, top: '72%', left: '1%', dur: '7.5s', spin: '12s', delay: '1s' },
+        { name: 'rose', size: 48, top: '9%',  right: '2%', dur: '6.5s', spin: '14s' },
+        { name: 'teal', size: 40, top: '70%', left: '1%',  dur: '7.5s', spin: '12s', delay: '1s' },
+        { name: 'pink', size: 34, top: '40%', right: '4%', dur: '6.2s', spin: '13s', delay: '0.5s' },
       ]} />
 
       {/* ── LEFT: the story ── */}
@@ -109,10 +108,7 @@ export default function About() {
           <p className="about-section__label">When I'm not building</p>
           <p>
             You'll find me on a pickleball court, doing the morning mini cryptic, over-ordering
-            oat lattes, planning the next trip, or losing at Bananagrams. There's also a{' '}
-            <Link to="/nest" className="about-link">little corner of this site ↗</Link>{' '}
-            that's just for fun — a pond you can ripple, what I'm watching, and a clock
-            ticking away in Niagara Falls.
+            oat lattes, planning the next trip, or losing at Bananagrams.
           </p>
         </div>
       </div>
@@ -121,7 +117,7 @@ export default function About() {
       <aside className="about-widgets">
         <Link to="/projects" className="pill-btn">See my work <span>↗</span></Link>
         <PhotoWidget />
-        <WeatherCard />
+        <RevolvingPhotos />
       </aside>
 
     </main>

@@ -5,7 +5,6 @@ const LINKS = [
   { to: '/',         label: 'Home', end: true },
   { to: '/about',    label: 'About' },
   { to: '/projects', label: 'Work' },
-  { to: '/nest',     label: 'Nest' },
 ]
 
 // Zoomable resume viewer. Drop your resume at public/resume.png (image, for zoom)

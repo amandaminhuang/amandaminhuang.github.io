@@ -46,18 +46,18 @@ export default function Home() {
   return (
     <main className="landing">
       <PageStars stars={[
-        { color: 'marigold', size: 34, top: '14%', left: '6%',  dur: '6s',   spin: '13s' },
-        { color: 'blue',     size: 26, top: '40%', right: '5%', dur: '7s',   spin: '15s', delay: '1.2s' },
+        { name: 'pink',    size: 52, top: '13%', left: '6%',  dur: '6s',   spin: '13s' },
+        { name: 'blue',    size: 42, top: '38%', right: '5%', dur: '7s',   spin: '15s', delay: '1.2s' },
+        { name: 'speckle', size: 38, top: '78%', left: '9%',  dur: '6.8s', spin: '12s', delay: '0.6s' },
       ]} />
 
       {/* ── HERO (pins + fades over a long scroll) ── */}
       <div className="landing-hero-wrap">
       <section className="landing-hero" ref={heroRef}>
         <div className="landing-hero__inner">
-          <p className="landing-hero__tag">
-            STRATEGY &amp; OPS <span className="star">✶</span> PRODUCT <span className="star">✶</span> CIVIC TECH
-          </p>
-          <h1 className="landing-hero__name">amanda huang</h1>
+          <h1 className="landing-hero__name landing-hero__name--img">
+            <img src="/amanda.png" alt="Amanda" />
+          </h1>
           <p className="landing-hero__intro">
             First-gen Yale student turning messy problems into clear plans. I care about
             strategy, operations, and product — and the people they're actually for.
@@ -91,16 +91,6 @@ export default function Home() {
               </div>
             </Link>
           ))}
-        </div>
-      </section>
-
-      {/* ── SAY HELLO ── */}
-      <section className="landing-section landing-hello reveal-up">
-        <h2 className="landing-hello__title">say hello <span className="star">✶</span></h2>
-        <p className="landing-hello__sub">Open to strategy / ops / PM roles — and always up for a good chat.</p>
-        <div className="landing-hero__ctas" style={{ justifyContent: 'center' }}>
-          <a href="mailto:amanda.huang@yale.edu" className="pill-btn">get in touch <span>→</span></a>
-          <Link to="/about" className="pill-btn pill-btn--ghost">more about me <span>→</span></Link>
         </div>
       </section>
 
