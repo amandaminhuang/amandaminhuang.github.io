@@ -20,7 +20,7 @@ function PhotoWidget() {
 }
 
 // ── REVOLVING PHOTO WIDGET (auto-cycles through public/photos/1.jpg … ) ──────
-const REVOLVE_PHOTOS = [1, 2, 3, 4]
+const REVOLVE_PHOTOS = [1, 2, 3, 4, 5]
 function RevolvingPhotos() {
   const [idx, setIdx] = useState(0)
   const [dead, setDead] = useState({})
