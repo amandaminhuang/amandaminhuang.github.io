@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
+import PageStars from '../components/PageStars'
 
 // ── DATA (easy to edit) ─────────────────────────────────────────────────────
 
@@ -29,6 +30,14 @@ const CURRENTLY = [
   { emoji: '🎧', label: 'looping',  value: 'anything with a good bridge' },
   { emoji: '🛠️', label: 'tinkering', value: 'this very website' },
   { emoji: '☕', label: 'drinking', value: 'an oat milk cortado' },
+]
+
+// Personal, just-for-fun projects. Swap in your own!
+const FUN_PROJECTS = [
+  { emoji: '🐱', title: 'Cat Alphabet',     desc: 'A typeface where every letter is a cat in a different pose.', color: '#E88C30' },
+  { emoji: '🎨', title: 'Charcoal Studies',  desc: 'Hand studies in charcoal, exploring connection and gesture.', color: '#45485C' },
+  { emoji: '🧩', title: 'Cryptic-a-day',     desc: 'A running log of the mini cryptics I solve each morning.', color: '#4FA3A5' },
+  { emoji: '🌐', title: 'This site',         desc: 'Hand-built in React — the pond, the clock, all of it.', color: '#3E7CB1' },
 ]
 
 // ── WATER RIPPLE POND ───────────────────────────────────────────────────────
@@ -203,12 +212,16 @@ function Bookshelf() {
 export default function Nest() {
   return (
     <main className="nest-page">
+      <PageStars stars={[
+        { color: 'green', size: 32, top: '9%',  right: '4%', dur: '6.5s', spin: '13s' },
+        { color: 'coral', size: 24, top: '66%', left: '2%', dur: '7.5s', spin: '15s', delay: '1.1s' },
+      ]} />
       <header className="nest-header">
         <p className="eyebrow">welcome to</p>
         <h1 className="title-xl">the nest ✶</h1>
-        <p className="subtitle" style={{ maxWidth: 520 }}>
-          A little corner of the internet that's just for fun — what I'm watching,
-          listening to, and the time ticking away in Niagara Falls. Poke around.
+        <p className="subtitle" style={{ maxWidth: 540 }}>
+          A little corner of the internet that's just for me — some personal projects,
+          what I'm watching &amp; reading, and the time ticking away in Niagara Falls. Poke around.
         </p>
       </header>
 
@@ -217,6 +230,22 @@ export default function Nest() {
       <RipplePond />
 
       <div className="nest-widgets">
+
+        {/* Fun projects */}
+        <div className="widget widget--fun">
+          <p className="widget__label">just-for-fun projects ✶</p>
+          <div className="fun-grid">
+            {FUN_PROJECTS.map(p => (
+              <div key={p.title} className="fun-tile" style={{ '--tile-color': p.color }}>
+                <span className="fun-tile__emoji">{p.emoji}</span>
+                <div>
+                  <p className="fun-tile__title">{p.title}</p>
+                  <p className="fun-tile__desc">{p.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
 
         {/* Currently */}
         <div className="widget widget--currently">

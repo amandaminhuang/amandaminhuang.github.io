@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import PageStars from '../components/PageStars'
 
 const CATEGORIES = [
   { id: 'all',        label: 'All' },
@@ -160,6 +161,10 @@ export default function Projects() {
 
   return (
     <main className="projects-page">
+      <PageStars stars={[
+        { color: 'lilac',    size: 30, top: '8%',  right: '3%', dur: '6.5s', spin: '14s' },
+        { color: 'marigold', size: 22, top: '58%', left: '2%', dur: '7.5s', spin: '12s', delay: '1.4s' },
+      ]} />
 
       <div>
         <h1>projects ✦</h1>
