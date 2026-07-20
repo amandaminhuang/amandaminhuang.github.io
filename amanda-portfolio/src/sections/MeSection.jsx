@@ -1,8 +1,6 @@
-import { Link } from 'react-router-dom'
 import { useEffect, useState } from 'react'
-import PageStars from '../components/PageStars'
 
-// ── ONE BIG PHOTO OF ME (drop public/amanda.jpg and it appears) ─────────────
+// ── ONE BIG PHOTO OF ME (public/amanda.jpg) ─────────────────────────────────
 function PhotoWidget() {
   const [failed, setFailed] = useState(false)
   return (
@@ -50,22 +48,21 @@ function RevolvingPhotos() {
   )
 }
 
-export default function About() {
+const scrollToWork = e => {
+  e.preventDefault()
+  document.getElementById('work')?.scrollIntoView({ behavior: 'smooth' })
+}
+
+export default function MeSection() {
   return (
-    <main className="about-layout">
-      <PageStars stars={[
-        { name: 'rose', size: 48, top: '9%',  right: '2%', dur: '6.5s', spin: '14s' },
-        { name: 'teal', size: 40, top: '70%', left: '1%',  dur: '7.5s', spin: '12s', delay: '1s' },
-        { name: 'pink', size: 34, top: '40%', right: '4%', dur: '6.2s', spin: '13s', delay: '0.5s' },
-      ]} />
+    <section id="me" className="section about-layout">
 
       {/* ── LEFT: the story ── */}
       <div className="about-text">
-        <p className="about-kicker">✶ my story</p>
-        <h1 className="about-name">Hi, I'm Amanda<span className="accent">.</span></h1>
+        <p className="about-kicker">✶ me</p>
+        <h2 className="about-name">Hi, I'm Amanda<span className="accent">.</span></h2>
         <p className="about-lede">
-          A first-gen Yale student who likes turning messy problems into clear plans —
-          and building things that make a stranger's day a little better.
+          A first-gen Yale student that is passionate about understanding how people interact with technology and building accessible and intuitive systems.
         </p>
 
         <div className="about-section">
@@ -86,9 +83,9 @@ export default function About() {
             <strong>Asian American civic advocacy</strong>,{' '}
             <strong>women &amp; gender minorities in tech</strong>, and{' '}
             <strong>federal policy</strong>. Lately that's looked like a{' '}
-            <Link to="/projects/sacm" className="about-link">platform evaluation ↗</Link>{' '}
+            <a href="#work" onClick={scrollToWork} className="about-link">platform evaluation ↓</a>{' '}
             that cut projected cost by 78%, and{' '}
-            <Link to="/projects/civic" className="about-link">digital voter outreach ↗</Link>{' '}
+            <a href="#work" onClick={scrollToWork} className="about-link">digital voter outreach ↓</a>{' '}
             for first-time AAPI voters.
           </p>
         </div>
@@ -100,7 +97,7 @@ export default function About() {
             <strong>product management</strong> — places where I can dig into a problem,
             talk to the people it affects, and turn that into something real. Curious how I
             think? Take a look at my{' '}
-            <Link to="/projects" className="about-link">work ↗</Link>.
+            <a href="#work" onClick={scrollToWork} className="about-link">work ↓</a>.
           </p>
         </div>
 
@@ -115,11 +112,11 @@ export default function About() {
 
       {/* ── RIGHT: sticky photo + widgets ── */}
       <aside className="about-widgets">
-        <Link to="/projects" className="pill-btn">See my work <span>↗</span></Link>
+        <a href="#work" onClick={scrollToWork} className="pill-btn">See my work <span>↓</span></a>
         <PhotoWidget />
         <RevolvingPhotos />
       </aside>
 
-    </main>
+    </section>
   )
 }

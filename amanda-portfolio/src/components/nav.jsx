@@ -1,10 +1,9 @@
 import { useState, useEffect } from 'react'
-import { NavLink } from 'react-router-dom'
 
-const LINKS = [
-  { to: '/',         label: 'Home', end: true },
-  { to: '/about',    label: 'Me' },
-  { to: '/projects', label: 'Work' },
+const SECTIONS = [
+  { id: 'home', label: 'Home' },
+  { id: 'me',   label: 'Me' },
+  { id: 'work', label: 'Work' },
 ]
 
 // Zoomable resume viewer. Drop your resume at public/resume.png (image, for zoom)
@@ -63,19 +62,37 @@ function ResumeModal({ onClose }) {
 
 export default function Nav() {
   const [resumeOpen, setResumeOpen] = useState(false)
+  const [active, setActive] = useState('home')
+
+  useEffect(() => {
+    const io = new IntersectionObserver(
+      entries => entries.forEach(e => { if (e.isIntersecting) setActive(e.target.id) }),
+      { rootMargin: '-45% 0px -50% 0px' }
+    )
+    SECTIONS.forEach(s => {
+      const el = document.getElementById(s.id)
+      if (el) io.observe(el)
+    })
+    return () => io.disconnect()
+  }, [])
+
+  const go = (e, id) => {
+    e.preventDefault()
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+  }
 
   return (
     <>
       <nav className="pillnav">
-        {LINKS.map(({ to, label, end }) => (
-          <NavLink
-            key={to}
-            to={to}
-            end={end}
-            className={({ isActive }) => isActive ? 'pillnav__link pillnav__link--active' : 'pillnav__link'}
+        {SECTIONS.map(s => (
+          <a
+            key={s.id}
+            href={`#${s.id}`}
+            onClick={e => go(e, s.id)}
+            className={active === s.id ? 'pillnav__link pillnav__link--active' : 'pillnav__link'}
           >
-            {label}
-          </NavLink>
+            {s.label}
+          </a>
         ))}
         <button className="pillnav__link pillnav__resume" onClick={() => setResumeOpen(true)}>
           Resume
