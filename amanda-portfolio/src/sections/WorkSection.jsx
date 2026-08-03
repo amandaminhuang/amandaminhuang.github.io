@@ -25,7 +25,7 @@ const PROJECTS = [
   },
   {
     id: '363', category: 'coding', emoji: '⚗️', color: '#4FA3A5',
-    image: null,
+    image: '/worksection/un.png',
     title: 'Global Water and Sanitation Landscape Analysis',
     meta: 'Research · UN · 2026',
     desc: 'Utilized UN census data to understand the global landscape of water and sanitation access, and what drives the disparities between and within countries. Using techniques like PCA, Cluster and Factor Analysis, we uncovered how rural access to water and sanitation serves as an indicator of overall infrastructure conditions.',
