@@ -27,14 +27,14 @@ export default function LuckyStar() {
         <div className="starnote" onClick={() => setOpen(false)}>
           <div className="starnote__card" onClick={e => e.stopPropagation()}>
             <div className="starnote__star"><img src="/stars/rose.png" alt="" width={64} /></div>
-            <p className="starnote__eyebrow">✶ you found the lucky star ✶</p>
-            <p className="starnote__msg">Let's connect — here's how to reach me:</p>
+            <p className="starnote__eyebrow">✶ you found my lucky star ✶</p>
+            <p className="starnote__msg">let's connect!</p>
 
             <div className="starnote__links">
               <a className="starnote__link" href="mailto:amanda.huang@yale.edu">
                 <span className="starnote__link-ic">✉️</span> amanda.huang@yale.edu
               </a>
-              <a className="starnote__link" href="https://linkedin.com/in/yourhandle" target="_blank" rel="noreferrer">
+              <a className="starnote__link" href="https://linkedin.com/in/amandaminhuang" target="_blank" rel="noreferrer">
                 <span className="starnote__link-ic">in</span> LinkedIn ↗
               </a>
               <a className="starnote__link" href="/resume.pdf" target="_blank" rel="noreferrer">

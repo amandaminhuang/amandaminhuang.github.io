@@ -61,7 +61,7 @@ export default function Home() {
             </h1>
             <p className="landing-hero__intro">
               First-gen Yale student passionate about understanding how people interact with
-              technology — and building solutions to make our world more accessible.
+              technology and building solutions to make our world more accessible.
             </p>
             <div className="landing-hero__ctas">
               <a href="#work" onClick={e => scrollTo(e, 'work')} className="pill-btn">see my work <span>↓</span></a>

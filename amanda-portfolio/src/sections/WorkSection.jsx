@@ -7,71 +7,160 @@ const CATEGORIES = [
   { id: 'coding',   label: 'Coding & Projects' },
 ]
 
+// ── ADD YOUR LINKS & IMAGES HERE ─────────────────────────────────────────────
+// image: put a file in /public/work/sacmgmt.png etc, or leave null for emoji
+// links: array of { label, href } — renders as pink pill buttons
+// ─────────────────────────────────────────────────────────────────────────────
 const PROJECTS = [
   {
-    id: 'sacm', category: 'work', emoji: '📈', color: '#E88C30',
-    title: 'Platform Evaluation — Service Academy Capital Management',
+    id: 'sacmgmt', category: 'work', emoji: '📈', color: '#E88C30',
+    image: null,
+    title: 'MAI Capital Management: Tech Transformation',
     meta: 'Strategy & Ops · Wealth Management · 2025',
-    desc: 'I led a build-vs-buy evaluation of AI platforms — gathering requirements from advisors, scoring vendors against them, and presenting a recommendation to leadership that cut projected platform cost by 78%.',
+    desc: 'Led an evaluation of various wealth management platforms by conducting stakeholder interviews, scoring vendors, researching demos, and presenting a recommendation to leadership that cut projected platform cost by 78%.',
+    links: [],
+  },
+  {
+    id: '363', category: 'coding', emoji: '⚗️', color: '#4FA3A5',
+    image: null,
+    title: 'Global Water and Sanitation Landscape Analysis',
+    meta: 'Research · UN · 2026',
+    desc: 'Utilized UN census data to understand the global landscape of water and sanitation access, and what drives the disparities between and within countries. Using techniques like PCA, Cluster and Factor Analysis, we uncovered how rural access to water and sanitation serves as an indicator of overall infrastructure conditions.',
+    links: [],
   },
   {
     id: 'civic', category: 'work', emoji: '🗳️', color: '#3E7CB1',
-    title: 'AAPI Voter Outreach — Dot Movement Digital',
+    image: null,
+    title: 'Dot Movement Digital: Non-Profit Funding & Curriculum Development',
     meta: 'Civic Tech · Consulting · 2024',
-    desc: 'Digital-first outreach for the AAPI Victory Alliance — grant research, a donor CRM, and multimedia that turned civic goals into a campaign first-time voters actually engaged with.',
+    desc: 'Restructured a CRM system of 500+ donors and researched grants for non-profit grant writing. Additionally launched an Asian American Pacific Islander K-12 Curriculum for schools across the United States.',
+    links: [],
   },
   {
     id: 'thurman', category: 'research', emoji: '⚖️', color: '#7A5FA3',
-    title: 'EZ Merge — Thurman Arnold Project',
+    image: null,
+    title: 'Yale School of Management: Thurman Arnold Project',
     meta: 'Policy · Legal Tech · 2025',
-    desc: 'Built a merger-eligibility review web app for antitrust screening, and presented it to the New York Attorney General’s Office.',
+    desc: "Built a scalable merger-eligibility review application to flag dangerous mergers and acquisitions under every state's anti-trust requirements. Drafted a State Statute and published a research paper on how unregulated mergers harm consumers. Presented at the New York Attorney General's Office.",
+    links: [
+      // { label: 'View the paper', href: '/tap-paper.pdf' },
+      // { label: 'View the deck', href: 'https://...' },
+    ],
   },
   {
     id: 'ub-carbon', category: 'research', emoji: '⚗️', color: '#4FA3A5',
-    title: 'Carbon Capture Research — UB Lin Lab',
+    image: null,
+    title: 'University at Buffalo: Carbon Capture Research',
     meta: 'Research · Environmental · 2023',
-    desc: 'Sorbent-modification research for carbon capture, presented internationally at Ritsumeikan University in Japan.',
+    desc: 'Conducted research on sorbent-modification to increase gas uptake for carbon capture, presented internationally at Ritsumeikan University in Japan through the Sakura Science Exchange Program.',
+    links: [
+      // { label: 'View the poster', href: '/ssp_carbon_capture.pdf' },
+    ],
   },
   {
     id: 'roswell', category: 'research', emoji: '🔬', color: '#C85F82',
+    image: null,
     title: 'ST6GAL1 & Breast Cancer — Roswell Park',
     meta: 'Research · Cancer Biology · 2022',
-    desc: 'NIH-funded research on how the ST6GAL1 enzyme drives metastasis in triple-negative breast cancer.',
+    desc: 'Triple-negative breast cancer (TNBC) is an invasive type of breast cancer that lacks indicators for early diagnosis. Conducted NIH-funded research on how the ST6GAL1 enzyme drives metastasis in TNBC. Presented poster at the Roswell Comprehensive Cancer Center Symposium.',
+    links: [
+      // { label: 'View the poster', href: '/roswell_poster.pdf' },
+      // { label: 'Read the abstract', href: '/st6gal1abstract.pdf' },
+    ],
   },
   {
     id: 'microplastics', category: 'research', emoji: '🧪', color: '#6FA99E',
+    image: null,
     title: 'Ionization & PET Microplastics',
     meta: 'Research · Environmental · 2021',
-    desc: 'Studied ionization effects on PET microplastics in water treatment — earned 1st place Best Poster & Presentation at the International Student Science Fair.',
+    desc: 'Researched how ionizing carbon rods by inducing an electric current can increase PET microplastic removal in Water Waste Treatment Plants. Earned 1st place in poster session and 1st place for presentation at the International Student Science Fair.',
+    links: [],
   },
   {
     id: 'cryptic', category: 'coding', emoji: '✏️', color: '#D99A2B',
-    title: 'The Minute Cryptic, Decrypted',
+    image: null,
+    title: 'Decrypting the Minute Cryptic',
     meta: 'NLP · Machine Learning · 2024',
-    desc: 'A two-stage ML pipeline that solves cryptic crossword clues, reaching 69% classification accuracy on wordplay types.',
+    desc: 'A two-stage ML pipeline using logistic regression that solves online cryptic crossword clues, reaching 69% classification accuracy on wordplay types.',
+    links: [
+      { label: 'Read the paper', href: '/LING_FINAL_ACL.pdf' },
+      // { label: 'View the deck', href: '/minute-cryptic-deck.pdf' },
+    ],
   },
   {
     id: 'covid-website', category: 'coding', emoji: '🌐', color: '#5B8FC9',
+    image: null,
     title: 'COVID-19 Misconceptions — Weill Cornell',
     meta: 'Health Equity · Web · 2021',
     desc: 'A capstone website addressing vaccine misinformation for diverse communities, built to make trustworthy health info accessible.',
+    links: [
+      // { label: 'Visit the site', href: 'https://...' },
+    ],
   },
 ]
 
 const VOLUNTEER = [
-  { name: 'Chinese American Student Association', role: 'Vice President', emoji: '🏮' },
-  { name: 'Queer + Asian @ Yale', role: 'Treasurer', emoji: '🌈' },
-  { name: 'Yale Computer Society', role: 'Events Director', emoji: '💻' },
-  { name: "Women's Leadership Initiative", role: 'Vice President', emoji: '👩🏻‍💼' },
-  { name: 'Volunteer Income Tax Assistance', role: 'Coordinator', emoji: '💰' },
-  { name: 'New Haven Community Health Care Van', role: 'Volunteer', emoji: '💉' },
-  { name: 'Yale Pathways to Science', role: 'Volunteer', emoji: '🧪' },
-  { name: 'HARVEST — Yale Sustainable Food Program', role: 'Orientation Leader', emoji: '👩🏻‍🌾' },
+  { name: 'Chinese American Student Association', role: 'Vice President',      emoji: '🏮' },
+  { name: 'Queer + Asian @ Yale',                role: 'Treasurer',            emoji: '🌈' },
+  { name: 'Yale Computer Society',               role: 'Events Director',      emoji: '💻' },
+  { name: "Women's Leadership Initiative",       role: 'Vice President',       emoji: '👩🏻‍💼' },
+  { name: 'Volunteer Income Tax Assistance',     role: 'Coordinator',          emoji: '💰' },
+  { name: 'New Haven Community Health Care Van', role: 'Volunteer',            emoji: '💉' },
+  { name: 'Yale Pathways to Science',            role: 'Volunteer',            emoji: '🧪' },
+  { name: 'HARVEST — Yale Sustainable Food',     role: 'Orientation Leader',   emoji: '👩🏻‍🌾' },
 ]
+
+function ProjectCard({ p }) {
+  const [imgFailed, setImgFailed] = useState(false)
+
+  return (
+    <article className="wcard">
+      {/* ── image / emoji header ── */}
+      <div className="wcard__img-wrap" style={{ '--card-color': p.color }}>
+        {p.image && !imgFailed ? (
+          <img
+            src={p.image}
+            alt={p.title}
+            className="wcard__img"
+            onError={() => setImgFailed(true)}
+          />
+        ) : (
+          <span className="wcard__emoji">{p.emoji}</span>
+        )}
+      </div>
+
+      {/* ── body ── */}
+      <div className="wcard__body">
+        <h3 className="wcard__title">{p.title}</h3>
+        <p className="wcard__meta">{p.meta}</p>
+        <p className="wcard__desc">{p.desc}</p>
+
+        {/* ── links ── */}
+        {p.links && p.links.filter(l => l.href).length > 0 && (
+          <div className="wcard__links">
+            {p.links.filter(l => l.href).map(link => (
+              <a
+                key={link.label}
+                href={link.href}
+                target="_blank"
+                rel="noreferrer"
+                className="wcard__pill"
+              >
+                {link.label}
+              </a>
+            ))}
+          </div>
+        )}
+      </div>
+    </article>
+  )
+}
 
 export default function WorkSection() {
   const [active, setActive] = useState('all')
-  const filtered = active === 'all' ? PROJECTS : PROJECTS.filter(p => p.category === active)
+  const filtered = active === 'all'
+    ? PROJECTS
+    : PROJECTS.filter(p => p.category === active)
 
   return (
     <section id="work" className="section work-section">
@@ -92,20 +181,8 @@ export default function WorkSection() {
         ))}
       </div>
 
-      <div className="work-grid">
-        {filtered.map(p => (
-          <article key={p.id} className="work-item">
-            <div className="work-item__tile" style={{ '--tile-color': p.color }}>
-              <span className="work-item__emoji">{p.emoji}</span>
-              <div className="work-item__pop"><span className="star">✶</span></div>
-            </div>
-            <div className="work-item__body">
-              <h3 className="work-item__title">{p.title}</h3>
-              <p className="work-item__meta">{p.meta}</p>
-              <p className="work-item__desc">{p.desc}</p>
-            </div>
-          </article>
-        ))}
+      <div className="wcard-grid">
+        {filtered.map(p => <ProjectCard key={p.id} p={p} />)}
       </div>
 
       {active === 'all' && (
