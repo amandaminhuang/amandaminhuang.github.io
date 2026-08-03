@@ -9,9 +9,10 @@ const CATEGORIES = [
 
 // ── ADD YOUR LINKS & IMAGES HERE ─────────────────────────────────────────────
 // image: put a file in /public/work/sacmgmt.png etc, or leave null for emoji
-// links: array of { label, href } — renders as pink pill buttons that open
-//   a preview modal (PDF/image inline, PPTX/DOC/XLS via Office viewer) with
-//   Open/Download actions
+// links: array of { label, href } — pink pills. An href starting with
+//   http(s):// just opens in a new tab; a local file path (e.g.
+//   /deliverables/foo.pdf) opens a preview modal (PDF/image inline,
+//   PPTX/DOC/XLS via Office viewer) with Open/Download actions
 // ─────────────────────────────────────────────────────────────────────────────
 const PROJECTS = [
   {
@@ -112,7 +113,7 @@ const VOLUNTEER = [
   { name: 'Volunteer Income Tax Assistance',     role: 'Coordinator',          emoji: '💰' },
   { name: 'New Haven Community Health Care Van', role: 'Volunteer',            emoji: '💉' },
   { name: 'Yale Pathways to Science',            role: 'Volunteer',            emoji: '🧪' },
-  { name: 'HARVEST — Yale Sustainable Food',     role: 'Orientation Leader',   emoji: '👩🏻‍🌾' },
+  { name: 'HARVEST: Yale Sustainable Food',     role: 'Orientation Leader',   emoji: '👩🏻‍🌾' },
 ]
 
 const OFFICE_EXTS = ['ppt', 'pptx', 'doc', 'docx', 'xls', 'xlsx']
@@ -205,14 +206,26 @@ function ProjectCard({ p, onPreview }) {
         {p.links && p.links.filter(l => l.href).length > 0 && (
           <div className="wcard__links">
             {p.links.filter(l => l.href).map(link => (
-              <button
-                key={link.label}
-                type="button"
-                className="wcard__pill"
-                onClick={() => onPreview(link)}
-              >
-                {link.label}
-              </button>
+              /^https?:\/\//.test(link.href) ? (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="wcard__pill"
+                >
+                  {link.label}
+                </a>
+              ) : (
+                <button
+                  key={link.label}
+                  type="button"
+                  className="wcard__pill"
+                  onClick={() => onPreview(link)}
+                >
+                  {link.label}
+                </button>
+              )
             ))}
           </div>
         )}
