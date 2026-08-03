@@ -16,8 +16,8 @@ const CATEGORIES = [
 // ─────────────────────────────────────────────────────────────────────────────
 const PROJECTS = [
   {
-    id: 'sacmgmt', category: 'work', emoji: '🩷', color: '#E88C30',
-    image: '/worksection/mai.pdf',
+    id: 'sacmgmt', category: 'work', emoji: '🗳️', color: '#E88C30',
+    image: '/worksection/mai.png',
     title: 'MAI Capital Management: Tech Transformation',
     meta: 'Strategy & Ops · Wealth Management · 2025',
     desc: 'Led an evaluation of various wealth management platforms by conducting stakeholder interviews, scoring vendors, researching demos, and presenting a recommendation to leadership that cut projected platform cost by 78%.',
@@ -25,7 +25,7 @@ const PROJECTS = [
   },
   {
     id: '363', category: 'coding', emoji: '🩷', color: '#4FA3A5',
-    image: '/worksection/un.png',
+    image: '/worksection/un_final.png',
     title: 'Global Water and Sanitation Landscape Analysis',
     meta: 'Research · UN · 2026',
     desc: 'Utilized UN census data to understand the global landscape of water and sanitation access, and what drives the disparities between and within countries. Using techniques like PCA, Cluster and Factor Analysis, we uncovered how rural access to water and sanitation serves as an indicator of overall infrastructure conditions.',
@@ -43,7 +43,7 @@ const PROJECTS = [
   },
   {
     id: 'thurman', category: 'research', emoji: '⚖️', color: '#7A5FA3',
-    image: '/worksection/ysm.jpg',
+    image: '/worksection/ysm.png',
     title: 'Yale School of Management: Thurman Arnold Project',
     meta: 'Policy · Legal Tech · 2025',
     desc: "Built a scalable merger-eligibility review application to flag dangerous mergers and acquisitions under every state's anti-trust requirements. Drafted a State Statute and published a research paper on how unregulated mergers harm consumers. Presented at the New York Attorney General's Office.",
@@ -54,7 +54,7 @@ const PROJECTS = [
   },
   {
     id: 'ub-carbon', category: 'research', emoji: '⚗️', color: '#4FA3A5',
-    image: null,
+    image: '/worksection/ub.png',
     title: 'University at Buffalo: Carbon Capture Research',
     meta: 'Research · Environmental · 2023',
     desc: 'Conducted research on sorbent-modification to increase gas uptake for carbon capture, presented internationally at Ritsumeikan University in Japan through the Sakura Science Exchange Program.',
@@ -65,7 +65,7 @@ const PROJECTS = [
   },
   {
     id: 'roswell', category: 'research', emoji: '🔬', color: '#C85F82',
-    image: null,
+    image: '/worksection/rwp.png',
     title: 'ST6GAL1 & Breast Cancer — Roswell Park',
     meta: 'Research · Cancer Biology · 2022',
     desc: 'Triple-negative breast cancer (TNBC) is an invasive type of breast cancer that lacks indicators for early diagnosis. Conducted NIH-funded research on how the ST6GAL1 enzyme drives metastasis in TNBC. Presented poster at the Roswell Comprehensive Cancer Center Symposium.',
@@ -84,7 +84,7 @@ const PROJECTS = [
   },
   {
     id: 'cryptic', category: 'coding', emoji: '✏️', color: '#D99A2B',
-    image: null,
+    image: '/worksection/minutecryp.png',
     title: 'Decrypting the Minute Cryptic',
     meta: 'NLP · Machine Learning · 2024',
     desc: 'A two-stage ML pipeline using logistic regression that solves online cryptic crossword clues, reaching 69% classification accuracy on wordplay types.',
@@ -95,7 +95,7 @@ const PROJECTS = [
   },
   {
     id: 'covid-website', category: 'coding', emoji: '🌐', color: '#5B8FC9',
-    image: null,
+    image: '/worksection/svh.png',
     title: 'Stormont Vail Health: Patient Journey',
     meta: 'Health Equity · Hackathon · 2026',
     desc: "Co-Developed an interactive dashboard for healthcare providers to track and aggregate patient encounters across fragmented hospital encounters. This application ties together clinical events into a streamlined workflow. By delivering dynamic summary statistics based on visits, medical codes, and comprehensive timelines, the application helps medical professionals quickly digest a patient's full medical history. Crucially, we designed the platform to benchmark individual journey lengths against overall hospital norms. This allows clinicians to audit their own care pathways for potential socio-demographic biases and identify if structural barriers, such as a patient's geographic location, are causing dropped check-ins or delayed care. Data is confidential under ASA.",
