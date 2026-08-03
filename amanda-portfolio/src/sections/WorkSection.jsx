@@ -30,7 +30,7 @@ const PROJECTS = [
   },
   {
     id: 'civic', category: 'work', emoji: '🗳️', color: '#3E7CB1',
-    image: null,
+    image: '/worksection/dmd.png',
     title: 'Dot Movement Digital: Non-Profit Funding & Curriculum Development',
     meta: 'Civic Tech · Consulting · 2024',
     desc: 'Restructured a CRM system of 500+ donors and researched grants for non-profit grant writing. Additionally launched an Asian American Pacific Islander K-12 Curriculum for schools across the United States.',
@@ -38,7 +38,7 @@ const PROJECTS = [
   },
   {
     id: 'thurman', category: 'research', emoji: '⚖️', color: '#7A5FA3',
-    image: null,
+    image: '/worksection/ysm.jpg',
     title: 'Yale School of Management: Thurman Arnold Project',
     meta: 'Policy · Legal Tech · 2025',
     desc: "Built a scalable merger-eligibility review application to flag dangerous mergers and acquisitions under every state's anti-trust requirements. Drafted a State Statute and published a research paper on how unregulated mergers harm consumers. Presented at the New York Attorney General's Office.",
@@ -83,8 +83,8 @@ const PROJECTS = [
     meta: 'NLP · Machine Learning · 2024',
     desc: 'A two-stage ML pipeline using logistic regression that solves online cryptic crossword clues, reaching 69% classification accuracy on wordplay types.',
     links: [
-      { label: 'Read the paper', href: '/LING_FINAL_ACL.pdf' },
-      // { label: 'View the deck', href: '/minute-cryptic-deck.pdf' },
+      { label: 'Paper', href: '/deliverables/LING_FINAL_ACL.pdf' },
+      { label: 'Deck', href: '/deliverables/mcd.pptx' },
     ],
   },
   {
