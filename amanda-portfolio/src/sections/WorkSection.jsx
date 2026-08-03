@@ -19,44 +19,70 @@ const PROJECTS = [
     id: 'sacmgmt', category: 'work', emoji: '🗳️', color: '#E88C30',
     image: '/worksection/mai.png',
     title: 'MAI Capital Management: Tech Transformation',
-    meta: 'Strategy & Ops · Wealth Management · 2025',
+    meta: 'Strategy & Ops · Wealth Management · Tech',
     desc: 'Led an evaluation of various wealth management platforms by conducting stakeholder interviews, scoring vendors, researching demos, and presenting a recommendation to leadership that cut projected platform cost by 78%.',
     links: [],
   },
+
   {
-    id: '363', category: 'coding', emoji: '🩷', color: '#4FA3A5',
-    image: '/worksection/un_final.png',
-    title: 'Global Water and Sanitation Landscape Analysis',
-    meta: 'Research · UN · 2026',
-    desc: 'Utilized UN census data to understand the global landscape of water and sanitation access, and what drives the disparities between and within countries. Using techniques like PCA, Cluster and Factor Analysis, we uncovered how rural access to water and sanitation serves as an indicator of overall infrastructure conditions.',
-    links: [],
+    id: 'thurman', category: 'research', emoji: '⚖️', color: '#7A5FA3',
+    image: '/worksection/ysm.png',
+    title: 'Yale School of Management: Thurman Arnold Project',
+    meta: 'Product Development · Policy Development· Research',
+    desc: "Built a scalable merger-eligibility review application to flag dangerous mergers and acquisitions under every state's anti-trust requirements. Drafted a State Statute and published a research paper on how unregulated mergers harm consumers. Presented at the New York Attorney General's Office. Code is avaliable upon request.",
+    links: [
+      { label: 'View the work', href: 'https://som.yale.edu/centers/thurman-arnold-project-at-yale/student-projects' },
+      { label: 'View the deck', href: '/deliverables/tap_slides.pptx' },
+    ],
   },
-  {
+    {
+    id: 'covid-website', category: 'coding', emoji: '🌐', color: '#5B8FC9',
+    image: '/worksection/svh.png',
+    title: 'Stormont Vail Health: Patient Journey',
+    meta: 'Product Development · Healthcare · Hackathon',
+    desc: "Developed an interactive dashboard for healthcare providers to track and aggregate patient encounters across fragmented hospital encounters. This application ties together clinical events into a streamlined workflow. By delivering dynamic summary statistics based on visits, medical codes, and comprehensive timelines, the application helps medical professionals quickly digest a patient's full medical history. Earned first place for the best business value at the 2026 ASA Datafest. Data is confidential under ASA.",
+    links: [
+      { label: 'Read more', href: 'https://statistics.yale.edu/posts/2026-04-23-sds-majors-win-best-business-value-at-2026-asa-datafest' },
+    ],
+  },
+
+    {
     id: 'civic', category: 'work', emoji: '🗳️', color: '#3E7CB1',
     image: '/worksection/dmd.png',
     title: 'Dot Movement Digital: Non-Profit Funding & Curriculum Development',
-    meta: 'Civic Tech · Consulting · 2024',
+    meta: ' Consulting · Education · Non-Profit',
     desc: 'Restructured a CRM system of 500+ donors and researched grants for an Asian American non-profit organization. Additionally launched an Asian American Pacific Islander K-12 Curriculum for schools across the United States.',
     links: [
       {label: 'AANHPI Curriculum: Learn More', href: 'https://www.ocanational.org/k12'}
     ],
   },
-  {
-    id: 'thurman', category: 'research', emoji: '⚖️', color: '#7A5FA3',
-    image: '/worksection/ysm.png',
-    title: 'Yale School of Management: Thurman Arnold Project',
-    meta: 'Policy · Legal Tech · 2025',
-    desc: "Built a scalable merger-eligibility review application to flag dangerous mergers and acquisitions under every state's anti-trust requirements. Drafted a State Statute and published a research paper on how unregulated mergers harm consumers. Presented at the New York Attorney General's Office.",
+    {
+    id: 'cryptic', category: 'coding', emoji: '✏️', color: '#D99A2B',
+    image: '/worksection/minutecryp.png',
+    title: 'Project: Decrypting the Minute Cryptic',
+    meta: 'Tech· Machine Learning',
+    desc: 'A two-stage ML pipeline using logistic regression that solves online cryptic crossword clues, reaching 69% classification accuracy on wordplay types.',
     links: [
-      { label: 'View the work', href: 'https://som.yale.edu/centers/thurman-arnold-project-at-yale/student-projects' },
-      { label: 'View the deck', href: '/deliverables/tap_slides.pptx' },
+      { label: 'Read the Paper', href: '/deliverables/LING_FINAL_ACL.pdf' },
+      { label: 'View the Deck', href: '/deliverables/mcd.pptx' },
+      { label: 'GitHub', href: 'https://github.com/amandaminhuang/MinuteCrypticDecrypter' },
+    ],
+  },
+      {
+    id: '363', category: 'coding', emoji: '🩷', color: '#4FA3A5',
+    image: '/worksection/un_final.png',
+    title: 'Project:Global Water and Sanitation Landscape Analysis',
+    meta: 'Research · Environmental · Data Science',
+    desc: 'Utilized UN census data to understand the global landscape of water and sanitation access, and what drives the disparities between and within countries. Using techniques like PCA, Cluster and Factor Analysis, we uncovered how rural access to water and sanitation serves as an indicator of overall infrastructure conditions.',
+    links: [
+      { label: 'Read the Paper', href: '/Final_Overview.docx' },
     ],
   },
   {
     id: 'ub-carbon', category: 'research', emoji: '⚗️', color: '#4FA3A5',
     image: '/worksection/ub.png',
     title: 'University at Buffalo: Carbon Capture Research',
-    meta: 'Research · Environmental · 2023',
+    meta: 'Research · Environmental',
     desc: 'Conducted research on sorbent-modification to increase gas uptake for carbon capture, presented internationally at Ritsumeikan University in Japan through the Sakura Science Exchange Program.',
     links: [
      { label: 'View the poster', href: '/deliverables/ssp_carbon_capture.pptx' },
@@ -66,7 +92,7 @@ const PROJECTS = [
   {
     id: 'roswell', category: 'research', emoji: '🔬', color: '#C85F82',
     image: '/worksection/rwp.png',
-    title: 'ST6GAL1 & Breast Cancer — Roswell Park',
+    title: 'Roswell Park Comprehensive Cancer Center: Impact of ST6GAL1 on Breast Cancer ',
     meta: 'Research · Cancer Biology · 2022',
     desc: 'Triple-negative breast cancer (TNBC) is an invasive type of breast cancer that lacks indicators for early diagnosis. Conducted NIH-funded research on how the ST6GAL1 enzyme drives metastasis in TNBC. Presented poster at the Roswell Comprehensive Cancer Center Symposium.',
     links: [
@@ -77,32 +103,14 @@ const PROJECTS = [
   {
     id: 'microplastics', category: 'research', emoji: '🧪', color: '#6FA99E',
     image: null,
-    title: 'Ionization & PET Microplastics',
-    meta: 'Research · Environmental · 2021',
+    title: 'Research: Ionization & PET Microplastics',
+    meta: 'Research · Environmental',
     desc: 'Researched how ionizing carbon rods by inducing an electric current can increase PET microplastic removal in Water Waste Treatment Plants. Earned 1st place in poster session and 1st place for presentation at the International Student Science Fair.',
     links: [],
   },
-  {
-    id: 'cryptic', category: 'coding', emoji: '✏️', color: '#D99A2B',
-    image: '/worksection/minutecryp.png',
-    title: 'Decrypting the Minute Cryptic',
-    meta: 'NLP · Machine Learning · 2024',
-    desc: 'A two-stage ML pipeline using logistic regression that solves online cryptic crossword clues, reaching 69% classification accuracy on wordplay types.',
-    links: [
-      { label: 'Read the Paper', href: '/deliverables/LING_FINAL_ACL.pdf' },
-      { label: 'View the Deck', href: '/deliverables/mcd.pptx' },
-    ],
-  },
-  {
-    id: 'covid-website', category: 'coding', emoji: '🌐', color: '#5B8FC9',
-    image: '/worksection/svh.png',
-    title: 'Stormont Vail Health: Patient Journey',
-    meta: 'Health Equity · Hackathon · 2026',
-    desc: "Co-Developed an interactive dashboard for healthcare providers to track and aggregate patient encounters across fragmented hospital encounters. This application ties together clinical events into a streamlined workflow. By delivering dynamic summary statistics based on visits, medical codes, and comprehensive timelines, the application helps medical professionals quickly digest a patient's full medical history. Crucially, we designed the platform to benchmark individual journey lengths against overall hospital norms. This allows clinicians to audit their own care pathways for potential socio-demographic biases and identify if structural barriers, such as a patient's geographic location, are causing dropped check-ins or delayed care. Data is confidential under ASA.",
-    links: [
-      { label: 'Read more', href: 'https://statistics.yale.edu/posts/2026-04-23-sds-majors-win-best-business-value-at-2026-asa-datafest' },
-    ],
-  },
+
+
+
 ]
 
 const VOLUNTEER = [
