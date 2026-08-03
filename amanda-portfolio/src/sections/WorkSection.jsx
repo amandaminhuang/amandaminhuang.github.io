@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 const CATEGORIES = [
   { id: 'all',      label: 'All' },
@@ -9,7 +9,9 @@ const CATEGORIES = [
 
 // ── ADD YOUR LINKS & IMAGES HERE ─────────────────────────────────────────────
 // image: put a file in /public/work/sacmgmt.png etc, or leave null for emoji
-// links: array of { label, href } — renders as pink pill buttons
+// links: array of { label, href } — renders as pink pill buttons that open
+//   a preview modal (PDF/image inline, PPTX/DOC/XLS via Office viewer) with
+//   Open/Download actions
 // ─────────────────────────────────────────────────────────────────────────────
 const PROJECTS = [
   {
@@ -33,8 +35,10 @@ const PROJECTS = [
     image: '/worksection/dmd.png',
     title: 'Dot Movement Digital: Non-Profit Funding & Curriculum Development',
     meta: 'Civic Tech · Consulting · 2024',
-    desc: 'Restructured a CRM system of 500+ donors and researched grants for non-profit grant writing. Additionally launched an Asian American Pacific Islander K-12 Curriculum for schools across the United States.',
-    links: [],
+    desc: 'Restructured a CRM system of 500+ donors and researched grants for an Asian American non-profit organization. Additionally launched an Asian American Pacific Islander K-12 Curriculum for schools across the United States.',
+    links: [
+      {label: 'AANHPI Curriculum: Learn More', href: 'https://www.ocanational.org/k12'}
+    ],
   },
   {
     id: 'thurman', category: 'research', emoji: '⚖️', color: '#7A5FA3',
@@ -54,7 +58,8 @@ const PROJECTS = [
     meta: 'Research · Environmental · 2023',
     desc: 'Conducted research on sorbent-modification to increase gas uptake for carbon capture, presented internationally at Ritsumeikan University in Japan through the Sakura Science Exchange Program.',
     links: [
-     { label: 'Poster', href: '/deliverables/ssp_carbon_capture.pptx' },
+     { label: 'View the poster', href: '/deliverables/ssp_carbon_capture.pptx' },
+     { label: 'Learn more', href: 'https://engineering.buffalo.edu/chemical-biological/people/faculty-directory.host.html/content/shared/engineering/chemical-biological/profiles/faculty/lin-haiqing.detail.research.html'}
     ],
   },
   {
@@ -64,8 +69,8 @@ const PROJECTS = [
     meta: 'Research · Cancer Biology · 2022',
     desc: 'Triple-negative breast cancer (TNBC) is an invasive type of breast cancer that lacks indicators for early diagnosis. Conducted NIH-funded research on how the ST6GAL1 enzyme drives metastasis in TNBC. Presented poster at the Roswell Comprehensive Cancer Center Symposium.',
     links: [
-      // { label: 'View the poster', href: '/roswell_poster.pdf' },
-      // { label: 'Read the abstract', href: '/st6gal1abstract.pdf' },
+      { label: 'View the poster', href: '/deliverables/roswell_poster.pdf' },
+      { label: 'Read the abstract', href: '/deliverables/st6gal1abstract.pdf' },
     ],
   },
   {
@@ -83,18 +88,18 @@ const PROJECTS = [
     meta: 'NLP · Machine Learning · 2024',
     desc: 'A two-stage ML pipeline using logistic regression that solves online cryptic crossword clues, reaching 69% classification accuracy on wordplay types.',
     links: [
-      { label: 'Paper', href: '/deliverables/LING_FINAL_ACL.pdf' },
-      { label: 'Deck', href: '/deliverables/mcd.pptx' },
+      { label: 'Read the Paper', href: '/deliverables/LING_FINAL_ACL.pdf' },
+      { label: 'View the Deck', href: '/deliverables/mcd.pptx' },
     ],
   },
   {
     id: 'covid-website', category: 'coding', emoji: '🌐', color: '#5B8FC9',
     image: null,
-    title: 'COVID-19 Misconceptions — Weill Cornell',
-    meta: 'Health Equity · Web · 2021',
-    desc: 'A capstone website addressing vaccine misinformation for diverse communities, built to make trustworthy health info accessible.',
+    title: 'Stormont Vail Health: Patient Journey',
+    meta: 'Health Equity · Hackathon · 2026',
+    desc: "Co-Developed an interactive dashboard for healthcare providers to track and aggregate patient encounters across fragmented hospital encounters. This application ties together clinical events into a streamlined workflow. By delivering dynamic summary statistics based on visits, medical codes, and comprehensive timelines, the application helps medical professionals quickly digest a patient's full medical history. Crucially, we designed the platform to benchmark individual journey lengths against overall hospital norms. This allows clinicians to audit their own care pathways for potential socio-demographic biases and identify if structural barriers, such as a patient's geographic location, are causing dropped check-ins or delayed care. Data is confidential under ASA.",
     links: [
-      // { label: 'Visit the site', href: 'https://...' },
+      { label: 'Read more', href: 'https://statistics.yale.edu/posts/2026-04-23-sds-majors-win-best-business-value-at-2026-asa-datafest' },
     ],
   },
 ]
@@ -110,7 +115,68 @@ const VOLUNTEER = [
   { name: 'HARVEST — Yale Sustainable Food',     role: 'Orientation Leader',   emoji: '👩🏻‍🌾' },
 ]
 
-function ProjectCard({ p }) {
+const OFFICE_EXTS = ['ppt', 'pptx', 'doc', 'docx', 'xls', 'xlsx']
+const IMAGE_EXTS = ['png', 'jpg', 'jpeg', 'gif', 'webp']
+
+function fileKind(href) {
+  const ext = href.split('.').pop().toLowerCase()
+  if (ext === 'pdf') return 'pdf'
+  if (IMAGE_EXTS.includes(ext)) return 'image'
+  if (OFFICE_EXTS.includes(ext)) return 'office'
+  return 'other'
+}
+
+// Office Online's viewer needs a publicly reachable URL, so PPTX/DOC/XLS
+// previews only render on the deployed site — not on localhost.
+function DeliverableModal({ link, onClose }) {
+  const kind = fileKind(link.href)
+  const absoluteUrl = new URL(link.href, window.location.origin).href
+  const officeViewerUrl = `https://view.officeapps.live.com/op/view.aspx?src=${encodeURIComponent(absoluteUrl)}`
+
+  useEffect(() => {
+    const onKey = e => { if (e.key === 'Escape') onClose() }
+    document.addEventListener('keydown', onKey)
+    document.body.style.overflow = 'hidden'
+    return () => {
+      document.removeEventListener('keydown', onKey)
+      document.body.style.overflow = ''
+    }
+  }, [onClose])
+
+  return (
+    <div className="resume-modal" onClick={onClose}>
+      <div className="resume-modal__panel" onClick={e => e.stopPropagation()}>
+        <div className="resume-modal__bar">
+          <span className="resume-modal__title">📄 {link.label}</span>
+          <div className="resume-modal__actions">
+            <a href={link.href} target="_blank" rel="noreferrer" className="resume-modal__link">Open ↗</a>
+            <a href={link.href} download className="resume-modal__link">Download ↓</a>
+            <button className="resume-modal__close" onClick={onClose} aria-label="Close">✕</button>
+          </div>
+        </div>
+
+        <div className="resume-modal__scroll">
+          {kind === 'pdf' && (
+            <embed src={link.href} type="application/pdf" className="deliverable-embed" />
+          )}
+          {kind === 'image' && (
+            <img src={link.href} alt={link.label} className="resume-img" />
+          )}
+          {kind === 'office' && (
+            <iframe src={officeViewerUrl} title={link.label} className="deliverable-embed" />
+          )}
+          {kind === 'other' && (
+            <div className="resume-modal__placeholder">
+              <p>Preview isn't available for this file type.</p>
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  )
+}
+
+function ProjectCard({ p, onPreview }) {
   const [imgFailed, setImgFailed] = useState(false)
 
   return (
@@ -139,15 +205,14 @@ function ProjectCard({ p }) {
         {p.links && p.links.filter(l => l.href).length > 0 && (
           <div className="wcard__links">
             {p.links.filter(l => l.href).map(link => (
-              <a
+              <button
                 key={link.label}
-                href={link.href}
-                target="_blank"
-                rel="noreferrer"
+                type="button"
                 className="wcard__pill"
+                onClick={() => onPreview(link)}
               >
                 {link.label}
-              </a>
+              </button>
             ))}
           </div>
         )}
@@ -158,6 +223,7 @@ function ProjectCard({ p }) {
 
 export default function WorkSection() {
   const [active, setActive] = useState('all')
+  const [previewLink, setPreviewLink] = useState(null)
   const filtered = active === 'all'
     ? PROJECTS
     : PROJECTS.filter(p => p.category === active)
@@ -182,8 +248,10 @@ export default function WorkSection() {
       </div>
 
       <div className="wcard-grid">
-        {filtered.map(p => <ProjectCard key={p.id} p={p} />)}
+        {filtered.map(p => <ProjectCard key={p.id} p={p} onPreview={setPreviewLink} />)}
       </div>
+
+      {previewLink && <DeliverableModal link={previewLink} onClose={() => setPreviewLink(null)} />}
 
       {active === 'all' && (
         <div className="volunteer">
