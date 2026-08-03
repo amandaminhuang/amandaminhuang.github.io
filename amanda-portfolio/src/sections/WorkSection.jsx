@@ -17,7 +17,7 @@ const CATEGORIES = [
 const PROJECTS = [
   {
     id: 'sacmgmt', category: 'work', emoji: '🩷', color: '#E88C30',
-    image: '/worksection/MAI.jpg',
+    image: '/worksection/mai.pdf',
     title: 'MAI Capital Management: Tech Transformation',
     meta: 'Strategy & Ops · Wealth Management · 2025',
     desc: 'Led an evaluation of various wealth management platforms by conducting stakeholder interviews, scoring vendors, researching demos, and presenting a recommendation to leadership that cut projected platform cost by 78%.',
