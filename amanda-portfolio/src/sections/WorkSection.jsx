@@ -24,7 +24,7 @@ const PROJECTS = [
     links: [],
   },
   {
-    id: '363', category: 'coding', emoji: '⚗️', color: '#4FA3A5',
+    id: '363', category: 'coding', emoji: '🩷', color: '#4FA3A5',
     image: '/worksection/un.png',
     title: 'Global Water and Sanitation Landscape Analysis',
     meta: 'Research · UN · 2026',
