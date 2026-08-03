@@ -14,7 +14,7 @@ const CATEGORIES = [
 const PROJECTS = [
   {
     id: 'sacmgmt', category: 'work', emoji: '🩷', color: '#E88C30',
-    image: '/public/worksection/MAI.jpg',
+    image: '/worksection/MAI.jpg',
     title: 'MAI Capital Management: Tech Transformation',
     meta: 'Strategy & Ops · Wealth Management · 2025',
     desc: 'Led an evaluation of various wealth management platforms by conducting stakeholder interviews, scoring vendors, researching demos, and presenting a recommendation to leadership that cut projected platform cost by 78%.',
@@ -44,7 +44,7 @@ const PROJECTS = [
     desc: "Built a scalable merger-eligibility review application to flag dangerous mergers and acquisitions under every state's anti-trust requirements. Drafted a State Statute and published a research paper on how unregulated mergers harm consumers. Presented at the New York Attorney General's Office.",
     links: [
       { label: 'View the work', href: 'https://som.yale.edu/centers/thurman-arnold-project-at-yale/student-projects' },
-      { label: 'View the deck', href: '/public/deliverables/tap_slides.pptx' },
+      { label: 'View the deck', href: '/deliverables/tap_slides.pptx' },
     ],
   },
   {
@@ -54,7 +54,7 @@ const PROJECTS = [
     meta: 'Research · Environmental · 2023',
     desc: 'Conducted research on sorbent-modification to increase gas uptake for carbon capture, presented internationally at Ritsumeikan University in Japan through the Sakura Science Exchange Program.',
     links: [
-      // { label: 'View the poster', href: '/ssp_carbon_capture.pdf' },
+     { label: 'Poster', href: '/deliverables/ssp_carbon_capture.pptx' },
     ],
   },
   {
