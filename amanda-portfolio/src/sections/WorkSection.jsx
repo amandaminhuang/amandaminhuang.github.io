@@ -13,7 +13,7 @@ const CATEGORIES = [
 // ─────────────────────────────────────────────────────────────────────────────
 const PROJECTS = [
   {
-    id: 'sacmgmt', category: 'work', emoji: '📈', color: '#E88C30',
+    id: 'sacmgmt', category: 'work', emoji: '🩷', color: '#E88C30',
     image: '/public/worksection/MAI.jpg',
     title: 'MAI Capital Management: Tech Transformation',
     meta: 'Strategy & Ops · Wealth Management · 2025',
