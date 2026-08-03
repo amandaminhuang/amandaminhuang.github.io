@@ -44,7 +44,7 @@ const PROJECTS = [
     desc: "Built a scalable merger-eligibility review application to flag dangerous mergers and acquisitions under every state's anti-trust requirements. Drafted a State Statute and published a research paper on how unregulated mergers harm consumers. Presented at the New York Attorney General's Office.",
     links: [
       { label: 'View the work', href: 'https://som.yale.edu/centers/thurman-arnold-project-at-yale/student-projects' },
-      // { label: 'View the deck', href: 'https://...' },
+      { label: 'View the deck', href: '/public/deliverables/tap_slides.pptx' },
     ],
   },
   {
