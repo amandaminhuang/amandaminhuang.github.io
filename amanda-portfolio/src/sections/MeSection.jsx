@@ -7,7 +7,7 @@ function PhotoWidget() {
   ) : (
     <img
       className="me-photo"
-      src="/amandahuang.png"
+      src="/newheadshot.png"
       alt="Amanda"
       onError={() => setFailed(true)}
     />
@@ -42,8 +42,8 @@ export default function MeSection() {
           <p className="me-chapter__label">what I'm Up To</p>
           <p>
             I'm passionate about building products that solve real problems.
-            I've worked across <strong>civic tech</strong>,{' '}
-            <strong>women & gender minorities in tech</strong>, and the{' '}
+            I've worked across <strong>tech</strong>,{' '}
+            <strong>strategy & operations</strong>, and the{' '}
             <strong>public sector</strong>. Most recently at Deloitte, I built a
             0-to-1 application that turned a manual onboarding process across seven
             systems into a single automated platform.
